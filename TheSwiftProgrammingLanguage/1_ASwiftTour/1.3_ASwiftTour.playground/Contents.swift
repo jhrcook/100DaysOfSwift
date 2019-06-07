@@ -513,3 +513,161 @@ let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 
 // ---- Protocols and Extensions ---- //
 
+protocol ExampleProtocol {
+    var simpleDescription: String { get }
+    mutating func adjust()
+}
+
+// classes, structs, and enums can all adopt protocols
+class SimpleClass: ExampleProtocol {
+    var simpleDescription: String = "A very simple class."
+    var anotherProperty: Int = 69105
+    func adjust() {
+        simpleDescription += " Now 100% adjusted."
+    }
+}
+var a = SimpleClass()
+a.adjust()
+let aDescription = a.simpleDescription
+
+struct SimpleStructure: ExampleProtocol {
+    var simpleDescription: String = "A simple structure"
+    mutating func adjust() {
+        simpleDescription += " (adjusted)"
+    }
+}
+// the `mutating` keyword indicates that `adjust()` will
+// modify the stucture
+var b = SimpleStructure()
+b.adjust()
+let bDescription = b.simpleDescription
+
+// extensions add functionality to existing types
+extension Int: ExampleProtocol {
+    var simpleDescription: String {
+        return "The number \(self)"
+    }
+    mutating func adjust() {
+        self += 42
+    }
+}
+print(7.simpleDescription)
+
+// values of type protocol are restricted to only the
+// methods in the protocol -- see example:
+let protocolValue: ExampleProtocol = a
+// from the protocol `ExampleProtocol`
+a.simpleDescription
+protocolValue.simpleDescription
+// from the class `SimpleClass: ExampleProtocol`
+a.anotherProperty
+// protocolValue.anotherProperty  // ERROR
+
+
+// ---- Error Handling ---- //
+// represent an error using the Error protocol
+enum PrinterError: Error {
+    case outOfPaper
+    case noToner
+    case onFire
+}
+
+// `throw` to throw and error
+// `throws` to mark a fxn that can throw an error
+func send(job: Int, toPrinter printerName: String) throws -> String {
+    if printerName == "Never Has Toner" {
+        throw PrinterError.noToner
+    } else if printerName == "Fire Printer" {
+        throw PrinterError.onFire
+    }
+    return "Job sent"
+}
+
+//do-catch to handle errors
+// do: code block that can throw an error; `try fxnThatCanThrow()`
+// catch: code block that executes if an error is thrown
+do {
+    let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+    print(printerResponse)
+} catch {
+    print(error)
+}
+// example to get an error
+do {
+    let printerResponse = try send(job: 1040, toPrinter: "Never Has Toner")
+    print(printerResponse)
+} catch {
+    print(error)
+}
+
+// multiple catch blocks with pattern matching just like in switch-case
+do {
+    let printerResponse = try send(job: 1440, toPrinter: "Fire Printer")
+    print(printerResponse)
+} catch PrinterError.onFire {
+    print("I'll just put this over here, with the rest of the fire.")
+} catch let printerError as PrinterError {
+    print("Printer error: \(printerError).")
+} catch {
+    print(error)
+}
+
+// can also handle errors with `try?`
+// if an error is thrown, `nil` is returned
+let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+let printerFailure = try? send(job: 1884, toPrinter: "Never Has Toner")
+
+// `defer` a block of code to always run at the end of a function
+// even if an error is thrown!
+var fridgeIsOpen = false
+let fridgeContent = ["milk", "eggs", "leftovers"]
+
+func fridgeContains(_ food: String) -> Bool {
+    fridgeIsOpen = true
+    defer {
+        fridgeIsOpen = false
+    }
+    
+    let result = fridgeContent.contains(food)
+    return result
+}
+fridgeContains("banana")
+fridgeContains("eggs")
+fridgeIsOpen
+
+// ---- Generics ---- //
+// create a generic by using a name inside angle brakets
+func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
+    var result = [Item]()
+    for _ in 0..<numberOfTimes {
+        result.append(item)
+    }
+    return result
+}
+makeArray(repeating: "knock", numberOfTimes: 4)
+makeArray(repeating: 42, numberOfTimes: 4)
+
+// functions, methods, classes, enums, structs can have generic forms
+enum OptionalValue<Wrapped> {
+    case none
+    case some(Wrapped)
+}
+var possibleInteger: OptionalValue<Int> = .none
+possibleInteger = .some(100)
+
+// preface with `where` to have conditions on the types
+func anyCommonElement<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
+    where T.Element: Equatable, T.Element == U.Element
+{
+    for lhsItem in lhs {
+        for rhsItem in rhs {
+            if lhsItem == rhsItem {
+                return true
+            }
+        }
+    }
+    return false
+}
+anyCommonElement([1,2,3], [3])
+anyCommonElement(["A", "B", "C"], ["D", "E"])
+// anyCommonElement([1,2,3], ["A", "B"])  // ERROR

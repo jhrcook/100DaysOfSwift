@@ -20,4 +20,4 @@ I am starting by working through ["The Swift Programming Language"](https://book
 
 **Day 3: June 7, 2019:** We finished "A Swift Tour" and are now working through the language guide. The tour ended with protocols and error handling. So far, the language guide is covering the basics of variables and constants.
 
-**Day 4: June 8, 2019:** We finished the basics of numerics, booleans, and tuples. I worked for a second hour and covered optionals and finished up the chapter on basics.
+**Day 4: June 8, 2019:** We finished the basics of numerics, booleans, and tuples. I worked for a second hour and covered optionals and finished up the chapter on basics. I completed a third hour where I learned about the basic operators available in Swift.

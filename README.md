@@ -19,3 +19,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 2: June 6, 2019:** We were introduced to classes, enums, and structs. While I know these are important in OOP, I have very little experience with them, so I made sure to understand the basics.
 
 **Day 3: June 7, 2019:** We finished "A Swift Tour" and are now working through the language guide. The tour ended with protocols and error handling. So far, the language guide is covering the basics of variables and constants.
+
+**Day 4: June 8, 2019:** We finished the basics of numerics, booleans, and tuples.

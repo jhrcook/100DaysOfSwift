@@ -145,4 +145,88 @@ print("The status message is \(http200Status.description).")
 
 
 // ---- Optionals ---- //
+// for situations where a value may be missing
+// either there is a value, or it is `nil`
+let possibleNumber = "123"
+let unlikelyNumber = "Hello!"
+let convertedNumber1: Int? = Int(possibleNumber)
+let convertedNumber2: Int? = Int(unlikelyNumber)
 
+// `nil`
+var serverResponseCode: Int? = 404
+serverResponseCode = nil
+
+// `nil` is the default value for an optional
+var surveyAnswer: String?
+
+// if-statements and forced unwrapping
+// can compare against `nil`
+if convertedNumber1 == nil {
+    print("possibleNumber is not an integer.")
+} else if convertedNumber2 == nil {
+    print("unlikelyNumber is not an integer.")
+}
+
+// forced unwrapping when it is known that the
+// optional is not `nil`
+if convertedNumber1 != nil {
+    print("convertedNumber has an integer value of \(convertedNumber1!).")
+}
+
+// optional binding to testi if value is not `nil` and using it
+if let actualNumber = Int(possibleNumber) {
+    print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
+}
+
+// multiple optional bindings -- all must be true
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+
+// Implicitly unwapped optionals
+// when an optional's value is known to exist (not `nil`)
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString!  // `!` is required
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString  // `!` not required
+
+
+// ---- Error Handling ---- //
+// a function can throw an error
+func canThrowAnError() throws {
+    // can throw an error
+}
+
+// when calling a function that can throw, using try-catch
+// the `do` statement creates a conatining scope to handle the error
+do {
+    try canThrowAnError()
+    // no error was thrown
+} catch {
+    // can error was thrown
+}
+
+
+// ---- Assertions and Preconditions ---- //
+// checks that happen at runtime
+// assertions are only run during debugging
+// preconditions are run in debugging and production
+let age = 3
+assert(age >= 0, "A person's age cannot be less than zero.")
+
+// use `assertionFailure()` if the condition is already checked
+if age > 10 {
+    print("You can ride the roller-coaster or ferric wheel.")
+} else if age >= 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
+
+// example of a precondition
+let index = 10
+precondition(index > 0, "Index must be greater than zero.")
+// there is an analogous `preconditionFailure()`
+
+// preconditions can be unchecked during compilation using `-Ounchecked`
+// there are also `fatalErrors()` that are never ignored

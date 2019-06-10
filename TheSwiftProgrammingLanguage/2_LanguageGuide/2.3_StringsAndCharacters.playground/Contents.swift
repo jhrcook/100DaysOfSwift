@@ -149,4 +149,65 @@ welcomeWord.removeSubrange(range)
 
 
 // ---- Substrings ---- //
+// returns an instance of `Substring` not another `String`
+// `Substrings` are meant to be temperory
+let greetingWorld = "Hello, world"
+let greetingIndex = greetingWorld.firstIndex(of: ",") ?? greetingWorld.endIndex
+let beginning = greetingWorld[..<greetingIndex]  // a `Substring`
+let newString = String(beginning)  // a `String`
 
+
+// ---- Comparing Strings ---- //
+// string and character equality, prefix equality, suffic equality
+
+// string and character equality
+let quotation2 = "We're a lot alike, you and I."
+let sameQutation2 = "We're a lot alike, you and I."
+quotation2 == sameQutation2
+quotation2 != sameQutation2
+
+// considered equal if their extended grapheme clusters are "canonically equivalent"
+// thus, can be of different Unicode characters
+// eg: LATIN SMALL LETTER E is "canonically equivalent" to LATIN SMALL LETTER E WITH ACUTE
+let eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
+let combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
+eAcuteQuestion == combinedEAcuteQuestion
+
+// prefix and suffix equality
+// check whether a string has a particular prefix or suffix
+
+let romeoAndJuliet = [
+    "Act 1 Scene 1: Verona, A public place",
+    "Act 1 Scene 2: Capulet's mansion",
+    "Act 1 Scene 3: A room in Capulet's mansion",
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+    "Act 2 Scene 1: Outside Capulet's mansion",
+    "Act 2 Scene 2: Capulet's orchard",
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+    "Act 2 Scene 4: A street in Verona",
+    "Act 2 Scene 5: Capulet's mansion",
+    "Act 2 Scene 6: Friar Lawrence's cell",
+]
+
+var act1SceneCount = 0
+for scene in romeoAndJuliet {
+    if scene.hasPrefix("Act 1 ") {
+        act1SceneCount += 1
+    }
+}
+
+var mansionCount = 0
+var cellCount = 0
+for scene in romeoAndJuliet {
+    if scene.hasSuffix("Capulet's mansion") {
+        mansionCount += 1
+    } else if scene.hasSuffix("Friar Lawrence's cell") {
+        cellCount += 1
+    }
+}
+print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
+
+
+// ---- Unicode Representations of Strings ---- //
+// good reference, but not obviously relevant to know

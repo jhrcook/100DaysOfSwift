@@ -23,3 +23,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 4: June 8, 2019:** We finished the basics of numerics, booleans, and tuples. I worked for a second hour and covered optionals and finished up the chapter on basics. I completed a third hour where I learned about the basic operators available in Swift.
 
 **Day 5: June 9, 2019:** Began the chapter of the language guide on Strings and Characters. Among other features of Strings in Swift, I learned about Unicode characters, indexing, and adding and removing characters.
+
+**Day 6: June 10, 2019:** Finished up Strings and Characters and moved on to Collection types (arrays, sets, and dictionaries). Covered arrays and sets.

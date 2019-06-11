@@ -24,4 +24,6 @@ I am starting by working through ["The Swift Programming Language"](https://book
 
 **Day 5: June 9, 2019:** Began the chapter of the language guide on Strings and Characters. Among other features of Strings in Swift, I learned about Unicode characters, indexing, and adding and removing characters.
 
-**Day 6: June 10, 2019:** Finished up Strings and Characters and moved on to Collection types (arrays, sets, and dictionaries). Covered arrays and sets.
+**Day 6: June 10, 2019:** Finished up Strings and Characters and moved on to Collection Types (arrays, sets, and dictionaries). Covered arrays and sets.
+
+**Day 7: June 11, 2019:** I learned about dictionaries to finish up the Collection Types chapter. I has starting the Control Flow chapter, learning about for loops, while loops, if-else statements, and switch-case statements.

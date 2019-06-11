@@ -130,3 +130,60 @@ farmAnimals.isDisjoint(with: cityAnimals)
 // key (unique, hashable): value pairs
 // unordered
 
+// an empty dict
+var namesOfIntegers = [Int: String]()
+namesOfIntegers[16] = "sixteen"
+namesOfIntegers = [:]  // empty again
+
+// dictionary literal
+var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+// type inference with literals
+var airports2 = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+
+// accessing and modifying
+airports.count
+airports.isEmpty
+
+// adding a new key: value
+airports["LHR"] = "London"
+//reassignment
+airports["LHR"] = "London Heathrow"
+
+// the updateValue method returns the old value if the key already exists
+if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+    print("The old value for DUB was \(oldValue).")
+}
+
+// subscript syntax returns an optional of the value type of the dict
+if let airportName = airports["DUB"] {
+    print("The name of the airport is \(airportName).")
+} else {
+    print("That airport is not in the airports dictionary.")
+}
+
+// remove a key: value by assigning to `nil`
+airports["APL"] = "Apple International"
+airports["APL"] = nil
+// or using the removeValue method (returns `nil` if no value existed
+if let removedValue = airports.removeValue(forKey: "DUB") {
+    print("The removed airport's name is \(removedValue).")
+} else {
+    print("The airports dictionary does not contain a value for DUB.")
+}
+
+// iterating over a dictionary
+for (airportCode, airportName) in airports {
+    print("\(airportCode): \(airportName)")
+}
+
+// accessing just keys or values (unordered)
+for airportCode in airports.keys {
+    print("Airport code: \(airportCode)")
+}
+for airportName in airports.values {
+    print("Airport name: \(airportName)")
+}
+
+// dict keys or values to arrays
+let airportCodes = [String](airports.keys.sorted())
+let airportNames = [String](airports.values.sorted())

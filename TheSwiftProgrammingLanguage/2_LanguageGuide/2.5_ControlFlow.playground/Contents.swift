@@ -215,4 +215,116 @@ default:
 
 
 // ---- Control Transfer Statements ---- //
+// continue, break, fallthrough, return, throw
 
+// continue
+// tells the loop to start again from the top
+let puzzleInput = "great minds think alike"
+var puzzleOutput = ""
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+for character in puzzleInput {
+    if charactersToRemove.contains(character) {
+        continue
+    }
+    puzzleOutput.append(character)
+}
+puzzleOutput
+
+// break
+// ends execution of the control flow statement
+// can be used in a switch statement essentially as an ignore for the case
+let numberSymbol: Character = "三"  // Chinese for 3
+var possibleIntegerValue: Int?
+switch numberSymbol {
+case "1", "١", "一", "๑":
+    possibleIntegerValue = 1
+case "2", "٢", "二", "๒":
+    possibleIntegerValue = 2
+case "3", "٣", "三", "๓":
+    possibleIntegerValue = 3
+case "4", "٤", "四", "๔":
+    possibleIntegerValue = 4
+default:
+    break
+}
+if let integerValue = possibleIntegerValue {
+    print("The integer value of \(numberSymbol) is \(integerValue).")
+} else {
+    print("An integer value could not be found for \(numberSymbol).")
+}
+
+
+// Fallthrough
+// Swift does not naturally fall through a switch statement, but it can be
+// done explicitly
+// it does not check the next condition's case, just automatically executes
+let integerToDescribe = 5
+var description = "The number \(integerToDescribe) is"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " a prime number, and also"
+    fallthrough
+default:
+    description += " an integer"
+}
+
+// labeled statements
+// (useing the "Snakes and Ladders" example)
+// recreate board
+board = [Int](repeating: 0, count: finalSquare + 1)
+// make ladders
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+// add snakes
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+// reset game play
+square = 0
+diceRoll = 0
+
+
+// new rule: must land exactly on the final square
+gameLoop: while square != finalSquare {
+    diceRoll += 1
+    if diceRoll == 7 { diceRoll = 1 }
+    switch square + diceRoll {
+    case finalSquare:
+        break gameLoop
+    case let newSquare where newSquare > finalSquare:
+        continue gameLoop
+    default:
+        square += diceRoll
+        square += board[square]
+    }
+}
+print("Game over!")
+
+
+// ---- Early Exit ---- //
+// guard statements must always have an else
+// like an if statement with relaxed scoping
+func greet(person: [String: String]) {
+    guard let name = person["name"] else {
+        return
+    }
+    
+    print("Hello \(name)!")
+    
+    guard let location = person["location"] else {
+        print("I hope the weather is nice near your.")
+        return
+    }
+    
+    print("I hope the weather is nice in \(location).")
+}
+
+greet(person: ["name": "John"])
+greet(person: ["name": "John", "location": "Cupertino"])
+
+
+// ---- Checking API Availability ---- //
+// Swift checks that all APIs the code attempts to use are available on the
+// device(s) intended to run the code
+if #available(iOS 10, macOS 10.12, *) {
+    // use iOS 10 APIs on iOS, and use macOS 10.12 APIs on macOS
+} else {
+    // fall back to ealier iOS and macOS APIs
+}

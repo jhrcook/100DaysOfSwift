@@ -27,3 +27,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 6: June 10, 2019:** Finished up Strings and Characters and moved on to Collection Types (arrays, sets, and dictionaries). Covered arrays and sets.
 
 **Day 7: June 11, 2019:** I learned about dictionaries to finish up the Collection Types chapter. I has starting the Control Flow chapter, learning about for loops, while loops, if-else statements, and switch-case statements. I finished off the day with an additional short session on control transfer statement (eg. `continue`, `break`, etc.) and on guard statements, an interesting tool that I have never seen before.
+
+**Day 8: June 12, 2019:** I began the chapter on Functions learning about the many options for defining and naming parameters, how to return mutliple paramters, and use in-out paramters (I've seen the `&param` in C++ before, but didn't know what it was doing).

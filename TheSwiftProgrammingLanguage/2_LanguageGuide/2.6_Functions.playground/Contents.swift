@@ -127,4 +127,65 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 
 
 // ---- Function Types ---- //
+// defined by the paramter and return types
 
+// these two functions are of the same type: `(Int, Int) -> Int`
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a * b
+}
+
+// no paramters or return value: `() -> Void`
+func printHelloWorld() {
+    print("hello, world.")
+}
+
+// can use the function types like other types in Swift
+var mathFunction: (Int, Int) -> Int = addTwoInts
+mathFunction(2, 3)
+mathFunction = multiplyTwoInts
+mathFunction(2, 3)
+
+// can use function types as paramters in a function
+func printMathResult(_ mathFxn: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print("Result: \(mathFxn(a, b))")
+}
+printMathResult(addTwoInts, 2, 3)
+printMathResult(multiplyTwoInts, 2, 3)
+
+// can use a function type as the return type
+func stepForward(_ input: Int) -> Int {
+    return input + 1
+}
+func stepBackward(_ input: Int) -> Int {
+    return input - 1
+}
+
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    return backward ? stepBackward : stepForward
+}
+var currentValue = 3
+let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
+print("Counting to zero:")
+while (currentValue != 0) {
+    print("\(currentValue)... ")
+    currentValue = moveNearerToZero(currentValue)
+}
+
+
+// ---- Nested Functions ---- //
+// nested functions are local in scope to the function they are defined in
+// can return a nested function to make available in another scope
+func chooseStepFunction2(backward: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int { return input + 1}
+    func stepBackward(input: Int) -> Int { return input - 1}
+    return backward ? stepBackward : stepForward
+}
+currentValue = -4
+let moveNearerToZero2 = chooseStepFunction2(backward: currentValue > 0)
+while (currentValue != 0) {
+    print("\(currentValue)... ")
+    currentValue = moveNearerToZero2(currentValue)
+}

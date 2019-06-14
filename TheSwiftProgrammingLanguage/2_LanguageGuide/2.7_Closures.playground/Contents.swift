@@ -150,4 +150,47 @@ print(instance.x)
 
 
 // ---- Autoclosures ---- //
+// wraps an expression that's being passed as an argument to a function
+// takes no arguments
+// returns the value that is inside of it
+// the code inside is only run when the closure is called (delays evaluation)
+var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+print(customersInLine.count)
 
+// closure of type `() -> String`
+let customerProvider = { customersInLine.remove(at: 0 )}
+print(customersInLine.count)
+
+print("Now serving \(customerProvider())!")
+print(customersInLine.count)
+print("Now serving \(customerProvider())!")
+print(customersInLine.count)
+
+customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+// a function can take an explicit closure
+func serve(customer customerProvider: () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+serve(customer: { customersInLine.remove(at: 0) })
+
+// the following function does the same thing, but takes an autoclosure
+func serve(customer customerProvider: @autoclosure () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+serve(customer: { customersInLine.remove(at: 0) })
+
+
+// escaping closure and autoclosure
+var customerProviders: [() -> String] = []
+func collectCustomerProviders(_ customerProvider: @autoclosure @escaping () -> String) {
+    customerProviders.append(customerProvider)
+}
+collectCustomerProviders(customersInLine.remove(at: 0))
+collectCustomerProviders(customersInLine.remove(at: 0))
+
+print("Collected \(customerProviders.count) closures.")
+
+for customerProvider in customerProviders {
+    print("Now serving \(customerProvider())!")
+}

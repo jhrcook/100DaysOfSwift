@@ -14,20 +14,22 @@ I am starting by working through ["The Swift Programming Language"](https://book
 
 ## Log
 
-**Day 1: June 5, 2019:** I have begun the introduction to Swift. We have covered the standard variables types, flow control, and the basics of functions and closures.
+**Day 1 - June 5, 2019:** I have begun the introduction to Swift. We have covered the standard variables types, flow control, and the basics of functions and closures.
 
-**Day 2: June 6, 2019:** We were introduced to classes, enums, and structs. While I know these are important in OOP, I have very little experience with them, so I made sure to understand the basics.
+**Day 2 - June 6, 2019:** We were introduced to classes, enums, and structs. While I know these are important in OOP, I have very little experience with them, so I made sure to understand the basics.
 
-**Day 3: June 7, 2019:** We finished "A Swift Tour" and are now working through the language guide. The tour ended with protocols and error handling. So far, the language guide is covering the basics of variables and constants.
+**Day 3 - June 7, 2019:** We finished "A Swift Tour" and are now working through the language guide. The tour ended with protocols and error handling. So far, the language guide is covering the basics of variables and constants.
 
-**Day 4: June 8, 2019:** We finished the basics of numerics, booleans, and tuples. I worked for a second hour and covered optionals and finished up the chapter on basics. I completed a third hour where I learned about the basic operators available in Swift.
+**Day 4 - June 8, 2019:** We finished the basics of numerics, booleans, and tuples. I worked for a second hour and covered optionals and finished up the chapter on basics. I completed a third hour where I learned about the basic operators available in Swift.
 
-**Day 5: June 9, 2019:** Began the chapter of the language guide on Strings and Characters. Among other features of Strings in Swift, I learned about Unicode characters, indexing, and adding and removing characters.
+**Day 5 - June 9, 2019:** Began the chapter of the language guide on Strings and Characters. Among other features of Strings in Swift, I learned about Unicode characters, indexing, and adding and removing characters.
 
-**Day 6: June 10, 2019:** Finished up Strings and Characters and moved on to Collection Types (arrays, sets, and dictionaries). Covered arrays and sets.
+**Day 6 - June 10, 2019:** Finished up Strings and Characters and moved on to Collection Types (arrays, sets, and dictionaries). Covered arrays and sets.
 
-**Day 7: June 11, 2019:** I learned about dictionaries to finish up the Collection Types chapter. I has starting the Control Flow chapter, learning about for loops, while loops, if-else statements, and switch-case statements. I finished off the day with an additional short session on control transfer statement (eg. `continue`, `break`, etc.) and on guard statements, an interesting tool that I have never seen before.
+**Day 7 - June 11, 2019:** I learned about dictionaries to finish up the Collection Types chapter. I has starting the Control Flow chapter, learning about for loops, while loops, if-else statements, and switch-case statements. I finished off the day with an additional short session on control transfer statement (eg. `continue`, `break`, etc.) and on guard statements, an interesting tool that I have never seen before.
 
-**Day 8: June 12, 2019:** I began the chapter on Functions learning about the many options for defining and naming parameters, how to return mutliple paramters, and use in-out paramters (I've seen the `&param` in C++ before, but didn't know what it was doing).
+**Day 8 - June 12, 2019:** I began the chapter on Functions learning about the many options for defining and naming parameters, how to return mutliple paramters, and use in-out paramters (I've seen the `&param` in C++ before, but didn't know what it was doing).
 
-**Day 9: June 13, 2019:** I finished up functions by learning how Swift defines and leverages their type. I have almost completed the next chapter on Closures; though it is a short chapter, the concepts were very new to me, so I had to slow down.
+**Day 9 - June 13, 2019:** I finished up functions by learning how Swift defines and leverages their type. I have almost completed the next chapter on Closures; though it is a short chapter, the concepts were very new to me, so I had to slow down.
+
+**Day 10 - June 14, 2019:** Learned about enumerations, an entirely new subject for me. They seem very useful through, especially in OOP.

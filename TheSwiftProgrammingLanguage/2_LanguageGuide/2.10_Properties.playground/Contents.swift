@@ -101,4 +101,91 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 
 
 // ---- Property Observers ---- //
+// observe and respond to changes ina property's value
+// `willSet` is called just before the value is stored
+// `didSet` is called just after the value is stored
 
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps) {
+            print("About to set totalSteps to \(newTotalSteps).")
+        }
+        didSet {
+            if totalSteps > oldValue {
+                print("Added \(totalSteps - oldValue) steps.")
+            }
+        }
+    }
+}
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+stepCounter.totalSteps = 360
+stepCounter.totalSteps = 896
+
+
+// ---- Global and Local Variables ---- //
+// can define computed global and local variables
+
+
+// ---- Type Properties ---- //
+// syntax
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProprty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+
+// querying type properties using dot syntax
+print(SomeStructure.storedTypeProperty)
+SomeStructure.storedTypeProperty = "Another value."
+print(SomeStructure.storedTypeProperty)
+print(SomeEnumeration.computedTypeProperty)
+print(SomeClass.computedTypeProperty)
+
+
+// example using stroed type properties as a structure that models an audio
+// level meter for a number of audio channels
+// two of these audio channels can model a stereo audio level meter
+struct AudioChannel  {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    var currentLevel: Int = 0 {
+        didSet {
+            if currentLevel > AudioChannel.thresholdLevel {
+                // cap the new audio level to the threshold
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                // store this as the new overall maximum input level
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
+}
+
+var leftChannel = AudioChannel()
+var rightChannel = AudioChannel()
+
+leftChannel.currentLevel = 7
+print(leftChannel.currentLevel)
+print(AudioChannel.maxInputLevelForAllChannels)
+
+rightChannel.currentLevel = 11
+print(rightChannel.currentLevel)
+print(AudioChannel.maxInputLevelForAllChannels)

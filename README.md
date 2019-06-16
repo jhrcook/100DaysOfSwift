@@ -35,3 +35,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 10 - June 14, 2019:** Learned about enumerations, an entirely new subject for me. They seem very useful through, especially in OOP.
 
 **Day 11 - June 15, 2019:** I worked through the (suprizingly short) chapter on Classes and Structures. I have started the Properties chapter loearning about properties of classes and structures - this is the farthest I have gome into OOP.
+
+**Day 12 - June 16, 2019:** I learned about structure, enumeration, and class properties, including stored, lazy stored, computed, and type properties. I began the chapter on Methods, learning about instance methods in classes and mutating instance methods for structures and enumerations.

@@ -33,3 +33,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 9 - June 13, 2019:** I finished up functions by learning how Swift defines and leverages their type. I have almost completed the next chapter on Closures; though it is a short chapter, the concepts were very new to me, so I had to slow down.
 
 **Day 10 - June 14, 2019:** Learned about enumerations, an entirely new subject for me. They seem very useful through, especially in OOP.
+
+**Day 11 - June 15, 2019:** I worked through the (suprizingly short) chapter on Classes and Structures. I have started the Properties chapter loearning about properties of classes and structures - this is the farthest I have gome into OOP.

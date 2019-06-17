@@ -37,3 +37,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 11 - June 15, 2019:** I worked through the (suprizingly short) chapter on Classes and Structures. I have started the Properties chapter loearning about properties of classes and structures - this is the farthest I have gome into OOP.
 
 **Day 12 - June 16, 2019:** I learned about structure, enumeration, and class properties, including stored, lazy stored, computed, and type properties. I began the chapter on Methods, learning about instance methods in classes and mutating instance methods for structures and enumerations. I came back to this for some extra coding in the evening and finished the section on Methods, learning about type methods.
+
+**Day 13 - June 17, 2019:** Covered inheritance of classes and how to create custom subscript behavior for a class. I have started the chapter in intializers for classes, structures, and enumerations, though have only touched the basics.

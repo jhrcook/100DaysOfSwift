@@ -39,3 +39,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 12 - June 16, 2019:** I learned about structure, enumeration, and class properties, including stored, lazy stored, computed, and type properties. I began the chapter on Methods, learning about instance methods in classes and mutating instance methods for structures and enumerations. I came back to this for some extra coding in the evening and finished the section on Methods, learning about type methods.
 
 **Day 13 - June 17, 2019:** Covered inheritance of classes and how to create custom subscript behavior for a class. I have started the chapter in intializers for classes, structures, and enumerations, though have only touched the basics.
+
+**Day 14 - June 18, 2019:** Still working through initializers; I covered initializer delegation and inheritance today, finishing it failable initializers.

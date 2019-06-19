@@ -356,3 +356,76 @@ if let oneUnnamed = CartItem(name: "", quantity: 1) {
 
 
 // overriding a failable initializer
+class Document {
+    var name: String?
+    init() {}
+    init?(name: String) {
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+// this subclass overrides both initializers in parent
+class AutomaticallyNamedDocument: Document {
+    override init() {
+        super.init()
+        self.name = "[Untitled]"
+    }
+    override init(name: String) {
+        super.init()
+        if name.isEmpty {
+            // default to "[Untitled]" instead of `nil`
+            self.name = "[Untitled]"
+        } else {
+            self.name = name
+        }
+    }
+}
+
+// force unwrap in an initializer to call a failable init in the superlcass
+// in a nonfailable init in the subclass
+class UntitleDocument: Document {
+    override init() {
+        super.init(name: "[Untitled]")!
+    }
+}
+
+
+// ---- Required initializers ---- //
+// an init that must be implemented by every subclass
+class SomeClass {
+    required init() {
+        // initializer implementation goes here
+    }
+}
+class SomeSubclass: SomeClass {
+    required init() {
+        // subclass implementation of the required init goes here
+    }
+}
+
+
+// ---- Setting a Default Property Value with a Closure or Function ---- //
+// use a closure or global func to provide a customized value for a property
+
+// example: Chessboard models a board for the game of chess (8 x 8 squares)
+struct Chessboard {
+    let boardColors: [Bool] = {
+        var temporaryBoard = [Bool]()
+        var isBlack = false
+        for i in 1...8 {
+            for j in 1...8 {
+                temporaryBoard.append(isBlack)
+                isBlack = !isBlack
+            }
+            isBlack = !isBlack
+        }
+        return temporaryBoard
+    }()
+    func squareIsBlackAt(row: Int, column: Int) -> Bool {
+        return(boardColors[(row * 8) + column])
+    }
+}
+
+let board = Chessboard()
+print(board.squareIsBlackAt(row: 0, column: 1))
+print(board.squareIsBlackAt(row: 7, column: 7))

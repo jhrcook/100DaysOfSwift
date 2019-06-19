@@ -41,3 +41,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 13 - June 17, 2019:** Covered inheritance of classes and how to create custom subscript behavior for a class. I have started the chapter in intializers for classes, structures, and enumerations, though have only touched the basics.
 
 **Day 14 - June 18, 2019:** Still working through initializers; I covered initializer delegation and inheritance today, finishing it failable initializers. I completed a second hour in the evening and finished up the initialization chapter. I then completed the deinitialization chapter and began the chapter on optional chaining.
+
+**Day 15 - June 19, 2019:** Finished up optional chaining; I understood everything I read, but I think this will take some getting used to in real life - it's another thing to keep in mind while programming. I also started error handling.

@@ -121,4 +121,70 @@ if (johnny.residence?.address = someAddress) != nil {
 
 
 // ---- Accessing Subscripts Through Optional Chaining ---- //
+// can try to retrieve or set a subscript value
+if let firstRoomName = johnny.residence?[0].name {
+    print("the first room name is \(firstRoomName).")
+} else {
+    print("Unable to retrieve the first room name.")
+}
 
+johnny.residence?[0] = Room(name: "Bathroom")
+
+let johnsHouse = Residence2()
+johnsHouse.rooms.append(Room(name: "Living Room"))
+johnsHouse.rooms.append(Room(name: "Kitchen"))
+johnny.residence = johnsHouse
+
+if let firstRoomName = johnny.residence?[0].name {
+    print("The first room name is \(firstRoomName).")
+} else {
+    print("Unable to retrieve the first room name.")
+}
+
+
+// if a subscript returns a value of optional type, place a question mark AFTER
+// the subscript
+var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
+testScores["Dave"]?[0] = 91
+testScores["Bev"]?[0] += 1
+testScores["Brian"]?[0] = 72  // `nil` --> no assignment
+print(testScores)
+
+
+// ---- Linking Multiple Levels of Chaining ---- //
+// example with two levels of optional chaining
+
+// fails
+if let johnsStreet = johnny.residence?.address?.street {
+    print("John's street name is \(johnsStreet).")
+} else {
+    print("Unable to retrieve the street name.")
+}
+
+// now add an Address
+let johnsAddress = Address()
+johnsAddress.buildingName = "The Larches"
+johnsAddress.street = "Laurel Street"
+johnny.residence?.address = johnsAddress
+
+// succeeds
+if let johnsStreet = johnny.residence?.address?.street {
+    print("John's street name is \(johnsStreet).")
+} else {
+    print("Unable to retrieve the street name.")
+}
+
+
+// ---- Chaining on Methods with Optional Return Values ---- //
+// optional chaining on the return object of a method
+if let buildingIdentifier = johnny.residence?.address?.buildingIdentifier() {
+    print("Johnny's building identifier is \(buildingIdentifier).")
+}
+
+if let beginsWithThe = johnny.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
+    if beginsWithThe {
+        print("Johnny's house building identifier begins with \"The\".")
+    } else {
+        print("Johnny's house building identifier does not begin with \"The\".")
+    }
+}

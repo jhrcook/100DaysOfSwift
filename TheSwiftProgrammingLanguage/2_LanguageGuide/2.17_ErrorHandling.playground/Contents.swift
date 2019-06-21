@@ -77,3 +77,63 @@ struct PurchasedSnack {
 }
 
 // 2) do-catch: handle errors by running a block of code
+var vendingMachine = VendingMachine()
+vendingMachine.coinsDeposited = 8
+do {
+    try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
+    print("Success! Yum.")
+} catch VendingMachineError.invalidSelection {
+    print("Invalid Selection")
+} catch  VendingMachineError.outOfStock {
+    print("Out of Stock")
+} catch VendingMachineError.insufficientFunds(let coinsNeeded) {
+    print("Insufficient funds. Please insert and additional \(coinsNeeded) coins")
+} catch {
+    print("Unexpected error: \(error)")
+}
+
+// if error is not handled by do-catch, gets propogated to outside scope
+func nourish(with item: String) throws {
+    do {
+        try vendingMachine.vend(itemNamed: item)
+    } catch is VendingMachineError {
+        print("Invalid selection, out of stock, or not enough money.")
+    }
+}
+do {
+    try nourish(with: "Beet-Flavored Chips")
+} catch {
+    print("Unexpected non-vending-machine-related error: \(error).")
+}
+
+// 3) convert error to optional values
+// in the below example, `x` and `y` have the exact same value (`Int?`) and
+//   same behavior
+func someThrowingFunction() throws -> Int {
+    return 1
+}
+let x = try? someThrowingFunction()
+let y: Int?
+do {
+    y = try someThrowingFunction()
+} catch {
+    y = nil
+}
+
+// 4) assert an error will not be thrown: `try!`
+let z = try! someThrowingFunction()
+
+
+// ---- Specifying Cleanup Actions ---- //
+// use `defer` to run code just before execution leaves the current code block
+func exampleOfDefer() {
+    var phrase = "Hello "
+    defer {
+        // executes last
+        phrase += "friend!"
+        print(phrase)
+    }
+    phrase += "there, "
+    // now run `defer { ... }`
+}
+exampleOfDefer()

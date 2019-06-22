@@ -45,3 +45,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 15 - June 19, 2019:** Finished up optional chaining; I understood everything I read, but I think this will take some getting used to in real life - it's another thing to keep in mind while programming. I also started error handling.
 
 **Day 16 - June 20, 2019:** I did *not* get in a full hour today - busy and late day in lab - but I'll make up for it tomorrow. I did finish up error handling and will be starting type casting.
+
+**Day 17 - June 21, 2019:** Covered type casting - I was suprized to learn about the seemingly flippant `Any` and `AnyObject` types. I also covered nested types where enums or structs can be nested within others and called using subscript dot syntax. Finally, I began extensions which seem like a very powerful feature.

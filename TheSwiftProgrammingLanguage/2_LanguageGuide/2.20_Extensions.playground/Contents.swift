@@ -54,3 +54,78 @@ let centerRect = Rect(center: Point(x: 4.0, y: 4.0),
 
 
 // ---- Methods ---- //
+// add new instance or type methods
+extension Int {
+    func repetitions(task: () -> Void) {
+        for _ in 0..<self {
+            task()
+        }
+    }
+}
+3.repetitions {
+    print("Hello")
+}
+
+// methods from an extension can also modify the instance
+extension Int {
+    mutating func square() {
+        self = self * self
+    }
+}
+var someInt = 3
+someInt.square()
+
+
+// ---- Subscripts ---- //
+// add new subscripts
+extension Int {
+    subscript(digitIndex: Int) -> Int {
+        var decimalBase = 1
+        for _ in 0..<digitIndex {
+            decimalBase *= 10
+        }
+        return (self / decimalBase) % 10
+    }
+}
+
+89308734759[0]  // first position
+89308734759[1]  // second position
+89308734759[5]  // sixth position
+7472[10]  // beyond end of the integer
+
+
+// ---- Nested Types ---- //
+// add new nested types to existing classes, structs, or enums
+extension Int {
+    // nested enumeration in `Int`
+    enum Kind {
+        case negative, zero, positive
+    }
+    
+    // computed variable to assign Kind
+    var kind: Kind {
+        switch self {
+        case 0:
+            return .zero
+        case let x where x > 0:
+            return .positive
+        default:
+            return .negative
+        }
+    }
+}
+
+// a function to print out Kind for a sequence of Int
+func printIntegerKind(_ numbers: [Int]) {
+    for number in numbers {
+        switch number.kind {
+        case .negative:
+            print("- ", terminator: "")
+        case .positive:
+            print("+ ", terminator: "")
+        case .zero:
+            print("0 ", terminator: "")
+        }
+    }
+}
+printIntegerKind([3, 19, -27, 0, -6, 0, 7])

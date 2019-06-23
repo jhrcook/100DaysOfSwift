@@ -49,3 +49,6 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 17 - June 21, 2019:** Covered type casting - I was suprized to learn about the seemingly flippant `Any` and `AnyObject` types. I also covered nested types where enums or structs can be nested within others and called using subscript dot syntax. Finally, I began extensions which seem like a very powerful feature.
 
 **Day 18 - June 22, 2019:** Finished up extensions where I learned how to add methods, subscripts, and nested types to existing types. I then bagan the section on protocols.
+
+**Day 19 - June 23, 2019:** Still working on protocols (one more section left). Today I covered extending an already existing type to conform to a protocol, defining collection types as protocols, protocol inheritance, class-only protocols, protocol composition, checking for conformance, and optional requirements (which may be obvious from the oxymoronic name, seems to defeat the purpose of protocols).
+

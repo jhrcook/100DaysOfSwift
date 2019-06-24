@@ -407,4 +407,39 @@ for _ in 1...5 {
 
 
 // ---- Protocol Extensions ---- //
-//
+// of course you can extend a protocol
+// add a method to a protocol, and all conformers automatically have it
+extension RandomNumberGenerator {
+    func randomBool() -> Bool {
+        return random() > 0.5
+    }
+}
+
+let generator2 = LinearCongruentialGenerator()
+print("Here's a random number: \(generator2.random())")
+print("And here's a random Boolean: \(generator2.randomBool())")
+
+// can prodivde a default implementation
+// a conforming type can provide one instead, too
+extension PrettyTextRepresentable {
+    var prettyTextualDescription: String {
+        return textualDescription
+    }
+}
+
+// add constraints to the protocol extension with `where`
+extension Collection where Element: Equatable {
+    func allEqual() -> Bool {
+        for element in self {
+            if element != self.first {
+                return false
+            }
+        }
+        return true
+    }
+}
+
+let equalNumbers = [100, 100, 100, 100]
+let unequalNumbers = [100, 100, 200, 100]
+equalNumbers.allEqual()
+unequalNumbers.allEqual()

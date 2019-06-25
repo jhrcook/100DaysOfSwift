@@ -53,3 +53,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 19 - June 23, 2019:** Still working on protocols (one more section left). Today I covered extending an already existing type to conform to a protocol, defining collection types as protocols, protocol inheritance, class-only protocols, protocol composition, checking for conformance, and optional requirements (which may be obvious from the oxymoronic name, seems to defeat the purpose of protocols).
 
 **Day 20 - June 24, 2019:** Finished protocols by learning how to extend them (and by relation, all of their conforming types). I then moved on to learning about generics including creating generic functions and generic types, and how to extend them and add type constrains. I started the section on using associated types in protocols.
+
+**Day 21 - June 25, 2019:** Finished up the Generics chapter learning about generic `where` clauses and generic subscripts. (I did this on the plane, and thus was not as efficient as normal.)

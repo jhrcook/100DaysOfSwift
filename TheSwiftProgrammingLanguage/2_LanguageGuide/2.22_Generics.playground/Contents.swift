@@ -199,3 +199,144 @@ struct Stack2<Element>: Container {
         return items[i]
     }
 }
+
+ // extend an existing type with a protocol
+ extension Array: Container {}
+ 
+ // add constains to an associated type
+ // example: another version of `Container` with resircitions on `Item`
+ protocol Container2 {
+    associatedtype Item: Equatable
+    mutating func append(_ item: Item)
+    var count: Int { get }
+    subscript(i: Int) -> Item { get }
+ }
+
+ // a protocol can appear as part of its own requirements
+ protocol SuffixableContainer: Container {
+    associatedtype Suffix: SuffixableContainer where Suffix.Item == Item
+    func suffix(_ size: Int) -> Suffix
+ }
+
+ extension Stack2: SuffixableContainer {
+    func suffix(_ size: Int) -> Stack2 {
+        var result = Stack2()
+        for index in (count-size)..<count {
+            result.append(self[index])
+        }
+        return result
+    }
+ }
+var stackOfInts = Stack2<Int>()
+stackOfInts.append(10)
+stackOfInts.append(20)
+stackOfInts.append(30)
+let suffix = stackOfInts.suffix(2)
+
+
+// ---- Generic Where Clauses ---- //
+// constrain the type paramters for associated types
+func allItemsMatch<C1: Container, C2: Container>(_ someContainer: C1, _ anotherContainer: C2) -> Bool where C1.Item == C2.Item, C1.Item: Equatable {
+    if someContainer.count != anotherContainer.count { return false }
+    
+    for i in 0..<someContainer.count {
+        if someContainer[i] != anotherContainer[i] { return false}
+    }
+    
+    return true
+}
+
+var stackOfStrings2 = Stack2<String>()
+stackOfStrings2.push("uno")
+stackOfStrings2.push("dos")
+stackOfStrings2.push("tres")
+
+var arrayOfStrings = ["uno", "dos", "tres"]
+
+if allItemsMatch(stackOfStrings2, arrayOfStrings) {
+    print("All items match.")
+} else {
+    print("Not all items match.")
+}
+
+
+// ---- Extensions with a Generic Where Clause ---- //
+// use a generic where clause as part of an extension
+extension Stack2 where Element: Equatable {
+    func isTop(_ item: Element) -> Bool {
+        // guard against the stack is empty
+        guard let topItem = items.last else {
+            return false
+        }
+        return topItem == item
+    }
+}
+// not all Stack2 instances that have elements that are equaltable, now has
+// the `.isTop()` method
+if stackOfStrings2.isTop("tres") {
+    print("Top element is tres.")
+} else {
+    print("Top element is something else.")
+}
+
+// error on run-time with Stack2 with non-equatable items
+struct NotEquatable { }
+var notEquatableStack = Stack<NotEquatable>()
+let notEquatableValue = NotEquatable()
+notEquatableStack.push(notEquatableValue)
+notEquatableStack.push(notEquatableValue)
+//notEquatableStack.isTop(notEquatableValue) // Error
+
+// use a generic where clause with extensiosn to a protocol
+extension Container where Item: Equatable {
+    func startsWith(_ item: Item) -> Bool {
+        return count >= 1 && self[0] == item
+    }
+}
+
+if [9, 9, 9].startsWith(42) {
+    print("Starts with 42.")
+} else {
+    print("Starts with something else.")
+}
+
+// a generic where clause that requires Item to be a specific type
+extension Container where Item == Double {
+    func average() -> Double {
+        var sum = 0.0
+        for index in 0..<count {
+            sum += self[index]
+        }
+        return sum / Double(count)
+    }
+}
+[1260.0, 1200.0, 98.6, 37.0].average()
+
+
+// ---- Associated Types with a Generic Where Clause ---- //
+// include a generic where clause on an associated type
+protocol Container3 {
+    associatedtype Item
+    mutating func append(_ item: Item)
+    var count: Int { get }
+    subscript(i: Int) -> Item { get }
+    
+    associatedtype Iterator: IteratorProtocol where Iterator.Element == Item
+    func makeIterator() -> Iterator
+}
+
+protocol ComparableContainer: Container where Item: Comparable { }
+
+
+// ---- Generic Subscripts ---- //
+// subscripts can be generics and can include a where caluse
+extension Container {
+    subscript<Indices: Sequence>(indices: Indices) -> [Item]
+        where Indices.Iterator.Element == Int {
+            var result = [Item]()
+            for index in indices {
+                result.append(self[index])
+            }
+            return result
+    }
+}

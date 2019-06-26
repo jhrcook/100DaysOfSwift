@@ -55,3 +55,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 20 - June 24, 2019:** Finished protocols by learning how to extend them (and by relation, all of their conforming types). I then moved on to learning about generics including creating generic functions and generic types, and how to extend them and add type constrains. I started the section on using associated types in protocols.
 
 **Day 21 - June 25, 2019:** Finished up the Generics chapter learning about generic `where` clauses and generic subscripts. (I did this on the plane, and thus was not as efficient as normal.)
+
+**Day 22 - June 26, 2019:** Learned about the Automatric Reference Counting system used in Swift. I also completed on the chapter on memory safety (to make up for yesterday).

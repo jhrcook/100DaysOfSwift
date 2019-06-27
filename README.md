@@ -18,7 +18,7 @@ I am starting by working through ["The Swift Programming Language"](https://book
 
 **Day 2 - June 6, 2019:** We were introduced to classes, enums, and structs. While I know these are important in OOP, I have very little experience with them, so I made sure to understand the basics.
 
-**Day 3 - June 7, 2019:** We finished "A Swift Tour" and are now working through the language guide. The tour ended with protocols and error handling. So far, the language guide is covering the basics of variables and constants.
+**Day 3 - June 7, 2019:** We finished *A Swift Tour* and are now working through the *Language Guide*. The tour ended with protocols and error handling. So far, the *Language Guide* is covering the basics of variables and constants.
 
 **Day 4 - June 8, 2019:** We finished the basics of numerics, booleans, and tuples. I worked for a second hour and covered optionals and finished up the chapter on basics. I completed a third hour where I learned about the basic operators available in Swift.
 
@@ -57,3 +57,5 @@ I am starting by working through ["The Swift Programming Language"](https://book
 **Day 21 - June 25, 2019:** Finished up the Generics chapter learning about generic `where` clauses and generic subscripts. (I did this on the plane, and thus was not as efficient as normal.)
 
 **Day 22 - June 26, 2019:** Learned about the Automatric Reference Counting system used in Swift. I also completed on the chapter on memory safety (to make up for yesterday). I continued with starting the Access Control chapter later in the evening.
+
+**Day 23 - June 27, 2019:** Learned about more aspects of Access Control. This seems like a topic that will take some practice in real-world applications to get a strong understanding of. I completed the advanced operators chapter where I learned aobut bitwise operations, operator methods, and custom operators. This finishes the *Language Guide* and is where I will stop in the *The Swift Programming Language* book.

@@ -10,7 +10,9 @@ End Date: September 13, 2019**
 
 I want to learn how to program in the Swift language. To this end, I will practice coding in Swift for at least one hour every day for 100 days.
 
-I am starting by working through ["The Swift Programming Language"](https://books.apple.com/us/book/the-swift-programming-language-swift-5-0/id881256329) book from Apple.
+I started by working through the first two chpaters of [*The Swift Programming Language*](https://books.apple.com/us/book/the-swift-programming-language-swift-5-0/id881256329) ebook from Apple.
+
+I am now working through example iOS projects by [*Hacking with Swift*](https://www.hackingwithswift.com/read). Each project will have its own directory in this repository.
 
 ## Log
 

@@ -56,4 +56,4 @@ I am starting by working through ["The Swift Programming Language"](https://book
 
 **Day 21 - June 25, 2019:** Finished up the Generics chapter learning about generic `where` clauses and generic subscripts. (I did this on the plane, and thus was not as efficient as normal.)
 
-**Day 22 - June 26, 2019:** Learned about the Automatric Reference Counting system used in Swift. I also completed on the chapter on memory safety (to make up for yesterday).
+**Day 22 - June 26, 2019:** Learned about the Automatric Reference Counting system used in Swift. I also completed on the chapter on memory safety (to make up for yesterday). I continued with starting the Access Control chapter later in the evening.

@@ -16,4 +16,8 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 **Day 1 - June 27, 2019**
 
-<img src="progress_screenshots/Simulator Screen Shot - iPhone XR - 2019-06-27 at 16.25.14.png" alt="drawing" width="300"/>
+<img src="progress_screenshots/Simulator Screen Shot - iPhone XR - 2019-06-27 at 16.25.14.png" width="300"/>
+
+**Day 2 - June 28, 2019**
+
+<img src="progress_screenshots/Jun-28-2019 10-52-06.gif" width="300"/>

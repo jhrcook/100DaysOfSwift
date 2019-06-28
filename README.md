@@ -61,3 +61,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 22 - June 26, 2019:** Learned about the Automatric Reference Counting system used in Swift. I also completed on the chapter on memory safety (to make up for yesterday). I continued with starting the Access Control chapter later in the evening.
 
 **Day 23 - June 27, 2019:** Learned about more aspects of Access Control. This seems like a topic that will take some practice in real-world applications to get a strong understanding of. I completed the advanced operators chapter where I learned aobut bitwise operations, operator methods, and custom operators. This finishes the *Language Guide* and is where I will stop in the *The Swift Programming Language* book. I also took a few minutes at the end of day to start the "Storm Viewer" app project, the first example in Hacking with Swift.
+
+**Day 24 - June 28, 2019:** Finished the "Storm Viewer" app (see GIF in that directory's README). In general, I learned how to create multiple view controllers and link them to the Interface Builder.

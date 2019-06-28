@@ -33,6 +33,7 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
+        pictures.sort()
     }
     
     // get number of rows to display
@@ -54,6 +55,8 @@ class ViewController: UITableViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             // set selectedImage property of the `DetailViewController` object
             vc.selectedImage = pictures[indexPath.row]
+            
+            vc.title = "Picture \(indexPath.row + 1) of \(pictures.count)"
             // puish it onto the navigation controller
             navigationController?.pushViewController(vc, animated: true)
         }

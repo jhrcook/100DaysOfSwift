@@ -20,4 +20,4 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 **Day 2 - June 28, 2019**
 
-<img src="progress_screenshots/Jun-28-2019 10-52-06.gif" width="300"/>
+<img src="progress_screenshots/Jun-28-2019 14-29-48.gif" width="300"/>

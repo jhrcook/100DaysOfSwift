@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
         
         // title of detailed view
         navigationItem.largeTitleDisplayMode = .never
-        title = selectedImage
         
         // load selected image data
         if let imageToLoad = selectedImage {

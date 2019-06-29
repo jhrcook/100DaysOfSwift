@@ -16,4 +16,12 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 **Day 1 - June 28, 2019**
 
+Tappable buttons that display the first three flags in the array, but they don't do anything when tapped.
+
 <img src="progress_screenshots/Jun-28-2019 21-51-12.gif" width="300"/>
+
+**Day 2 - June 29, 2019**
+
+Finished app! A coutry's name is displayed at the top, and the user must click the correct flag below. Selecting the correct answer advances the score by one, and the incorrect answer reduces the score by one. The flags are shuffled and which button holds the correct answer is selected at random. The score is tracked and reported in the title of the view and the messages after each round.
+
+<img src="progress_screenshots/Jun-29-2019 07-29-26.gif" width="300"/>

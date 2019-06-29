@@ -15,8 +15,12 @@ class ViewController: UIViewController {
     
     // array of all countries
     var countries = [String]()
+    // which flag (0, 1, or 2) is the correct one
+    var correctAnswer = 0
     // current game score
     var score = 0
+    // number of rounds
+    var numberOfRoundsPlayed = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +46,54 @@ class ViewController: UIViewController {
     }
     
     // display flags
-    func askQuestion() {
+    func askQuestion(action: UIAlertAction! = nil) {
+        // shuffle the countries array
+        countries.shuffle()
+        
+        // set the first three flags as the button images
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
+        
+        // which flag to ask for
+        correctAnswer = Int.random(in: 0...2)
+        
+        // set title as country and current score
+        title = "current score: \(score) - \(countries[correctAnswer].uppercased())"
     }
 
-
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        // increment number of rounds played
+        numberOfRoundsPlayed += 1
+        
+        // custom message for alert if wrong answer
+        var acTitle: String
+        
+        // handle which button is tapped
+        if sender.tag == correctAnswer {
+            score += 1
+            title = "Correct"
+            acTitle = title!
+        } else {
+            score -= 1
+            title = "Wrong"
+            acTitle = "Wrong, that is the flag of \(countries[sender.tag].uppercased())."
+        }
+        
+        
+        // alert about current score
+        let ac = UIAlertController(
+            title: acTitle,
+            message: "Your score is \(score) of \(numberOfRoundsPlayed).",
+            preferredStyle: .alert
+        )
+        // add an action to the alert
+        ac.addAction(UIAlertAction(
+            title: "Continue", style: .default, handler: askQuestion
+        ))
+        // present the alert
+        present(ac, animated: true)
+    }
+    
 }
 

@@ -18,21 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-he-3Y9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-he-3Y9">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxo-tG-VyP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxo-tG-VyP">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMJ-jS-tbS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMJ-jS-tbS">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UUx-he-3Y9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="2dE-bX-Hyp"/>
                             <constraint firstItem="UUx-he-3Y9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="H7R-fO-Isi"/>
                             <constraint firstItem="Cxo-tG-VyP" firstAttribute="centerX" secondItem="UUx-he-3Y9" secondAttribute="centerX" id="Hk7-6g-cEG"/>
                             <constraint firstItem="Cxo-tG-VyP" firstAttribute="top" secondItem="UUx-he-3Y9" secondAttribute="bottom" constant="30" id="R8F-yd-lbs"/>

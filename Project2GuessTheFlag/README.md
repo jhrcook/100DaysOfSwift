@@ -16,4 +16,4 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 **Day 1 - June 28, 2019**
 
-<!--<img src="" width="300"/>-->
+<img src="progress_screenshots/Jun-28-2019 21-51-12.gif" width="300"/>

@@ -16,8 +16,17 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 **Day 1 - June 27, 2019**
 
+Blank screen, but got the project set up!
+
 <img src="progress_screenshots/Simulator Screen Shot - iPhone XR - 2019-06-27 at 16.25.14.png" width="300"/>
 
 **Day 2 - June 28, 2019**
 
+Finished the tutorial. The app presents the images in a table view with interactive title. Selecting a file slides in the image with a dismissable navigation bar. Swiping left will pull back the table view.
+
 <img src="progress_screenshots/Jun-28-2019 14-29-48.gif" width="300"/>
+
+
+**Day 3 - June 29, 2019**
+
+Added a bar button item than shows the score when tapped.

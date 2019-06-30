@@ -25,3 +25,9 @@ Tappable buttons that display the first three flags in the array, but they don't
 Finished app! A coutry's name is displayed at the top, and the user must click the correct flag below. Selecting the correct answer advances the score by one, and the incorrect answer reduces the score by one. The flags are shuffled and which button holds the correct answer is selected at random. The score is tracked and reported in the title of the view and the messages after each round.
 
 <img src="progress_screenshots/Jun-29-2019 07-29-26.gif" width="300"/>
+
+**Day 3 - June 30, 2019**
+
+(Part of Project 3) I added a button in the navigation bar that shows the current score.
+
+<img src="progress_screenshots/Jun-30-2019 09-16-29.gif" width="300"/>

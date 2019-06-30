@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // right bar item to show score when pressed
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Score",
+            style: .plain,
+            target: self,
+            action: #selector(showScore)
+        )
+        
         // add all countries to the array
         countries += [
             "estonia", "france", "germany", "ireland", "italy", "monaco",
@@ -93,6 +101,21 @@ class ViewController: UIViewController {
         ))
         // present the alert
         present(ac, animated: true)
+    }
+    
+    // show score for right bar button
+    @objc func showScore() {
+        let alertController = UIAlertController(
+            title: "Current Score",
+            message: "Your score is \(score) of \(numberOfRoundsPlayed).",
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(
+            title: "Done",
+            style: .default)
+            { (_: UIAlertAction) in print("Pressed 'Return'.") }
+        )
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

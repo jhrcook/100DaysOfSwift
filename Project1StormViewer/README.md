@@ -29,4 +29,6 @@ Finished the tutorial. The app presents the images in a table view with interact
 
 **Day 3 - June 29, 2019**
 
-Added a bar button item than shows the score when tapped.
+Added a bar button item that allows the user the share the image and copy the image name.
+
+<img src="progress_screenshots/Jun-29-2019 21-25-21.gif" width="300"/>

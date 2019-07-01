@@ -10,7 +10,7 @@ End Date: September 13, 2019**
 
 I want to learn how to program in the Swift language. To this end, I will practice coding in Swift for at least one hour every day for 100 days.
 
-This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) call ["Guess the Flag"](https://www.hackingwithswift.com/read/1/overview). It creates a simple game where the player must name the country that the flag represents. I will post images below of the view of the app after each day's work.
+This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) called ["Guess the Flag"](https://www.hackingwithswift.com/read/1/overview). It creates a simple game where the player must name the country that the flag represents. I will post images below of the view of the app after each day's work.
 
 ## Daily progress of "Guess the Flag" app
 

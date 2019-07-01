@@ -19,3 +19,7 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 The web view loads Google.com by default and there is a pop-up window with the option to select from 3 websites. Swipe navigation to go forwards or backwards in the history is available.
 
 <img src="progress_screenshots/Jun-30-2019 09-10-36.gif" width="300"/>
+
+I continued working on the browser project in the evening. I add a tool bar to the bottom for backward/forward navigation, a loading progress bar, a share button (my own addition) and a refresh button. There is also a feature that blocks unknown hosting names and an alert pops up if a clicked link is blocked.
+
+<img src="progress_screenshots/Jun-30-2019 21-49-22.gif" width="300"/>

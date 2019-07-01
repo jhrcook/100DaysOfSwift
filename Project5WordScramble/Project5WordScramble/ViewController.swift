@@ -19,8 +19,10 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // add a right bar button
+        // add a right bar button to open submission pop-up
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
+        // add left bar button to start new game
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New game", style: .plain, target: self, action: #selector(startGame))
         
         // prepare word lists
         if let statWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
@@ -32,11 +34,11 @@ class ViewController: UITableViewController {
             allWords = ["silkworm"]
         }
         
-        // start game
+        // start first game
         startGame()
     }
     
-    func startGame() {
+    @objc func startGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()

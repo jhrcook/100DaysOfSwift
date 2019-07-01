@@ -19,3 +19,7 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 The title presents a word for the user to submit anagrams of. Then the submitted answers are checked against three criteria: is the word a real word, has it already been used, and can it be constructed from the prodivided word. I demonstrate all three possible failures in the example below.
 
 <img src="progress_screenshots/Jul-01-2019 09-30-27.gif" width="300"/>
+
+I finished the additional challenges by adding a left bar button to start a new game.
+
+<img src="progress_screenshots/Jul-01-2019 16-08-37.gif" width="300"/>

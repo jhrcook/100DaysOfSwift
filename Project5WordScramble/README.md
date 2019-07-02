@@ -1,4 +1,4 @@
-# 100 Days of Swift - "Easy Browser" iOS App
+# 100 Days of Swift - "Word Scramble" iOS App
 
 ![100DaysOfCodeSwift](https://img.shields.io/badge/100DaysOfCode-Swift-FA7343.svg?style=flat&logo=swift)
 [![jhc github](https://img.shields.io/badge/GitHub-jhrcook-lightgrey.svg?style=flat&logo=github)](https://github.com/jhrcook)

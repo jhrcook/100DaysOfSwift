@@ -20,3 +20,8 @@ I started by updating project 2, the "Guess the Flag" game, to work in landscape
 
 <img src="progress_screenshots/Jul-01-2019 16-55-22.gif" width="300"/>
 
+**Day 2 - July 2, 2019**
+
+I learned how to create a layout using Auto Layout and constraints. The example uses the safe area constrains on the leading edge (where the text is) but not the trailing edge (where there is not text to protect).
+
+<img src="progress_screenshots/Jul-02-2019 09-26-39.gif" width="300"/>

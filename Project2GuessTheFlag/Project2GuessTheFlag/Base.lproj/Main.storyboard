@@ -20,6 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-he-3Y9">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UUx-he-3Y9" secondAttribute="height" multiplier="2:1" id="jIx-q0-ywU"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLi-pQ-HJE"/>
@@ -27,6 +30,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxo-tG-VyP">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cxo-tG-VyP" secondAttribute="height" multiplier="2:1" id="6Uf-b7-LeT"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBz-tJ-z1v"/>
@@ -34,6 +40,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMJ-jS-tbS">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VMJ-jS-tbS" secondAttribute="height" multiplier="2:1" id="Yq8-bv-9cg"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewf-Vy-vE6"/>
@@ -42,13 +51,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Cxo-tG-VyP" firstAttribute="width" secondItem="UUx-he-3Y9" secondAttribute="width" id="1Z1-cu-l9M"/>
                             <constraint firstItem="UUx-he-3Y9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="2dE-bX-Hyp"/>
                             <constraint firstItem="UUx-he-3Y9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="H7R-fO-Isi"/>
                             <constraint firstItem="Cxo-tG-VyP" firstAttribute="centerX" secondItem="UUx-he-3Y9" secondAttribute="centerX" id="Hk7-6g-cEG"/>
                             <constraint firstItem="Cxo-tG-VyP" firstAttribute="top" secondItem="UUx-he-3Y9" secondAttribute="bottom" constant="30" id="R8F-yd-lbs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VMJ-jS-tbS" secondAttribute="bottom" constant="20" id="VaI-qZ-auf"/>
                             <constraint firstItem="VMJ-jS-tbS" firstAttribute="top" secondItem="Cxo-tG-VyP" secondAttribute="bottom" constant="30" id="Vwe-aS-6bc"/>
+                            <constraint firstItem="Cxo-tG-VyP" firstAttribute="height" secondItem="UUx-he-3Y9" secondAttribute="height" id="ZsW-ZO-wfZ"/>
+                            <constraint firstItem="VMJ-jS-tbS" firstAttribute="height" secondItem="Cxo-tG-VyP" secondAttribute="height" id="bP4-eX-dlc"/>
                             <constraint firstItem="VMJ-jS-tbS" firstAttribute="centerX" secondItem="Cxo-tG-VyP" secondAttribute="centerX" id="emy-Y0-wE6"/>
                             <constraint firstItem="UUx-he-3Y9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nMz-GF-tE2"/>
+                            <constraint firstItem="VMJ-jS-tbS" firstAttribute="width" secondItem="Cxo-tG-VyP" secondAttribute="width" id="s3n-Le-Jq1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

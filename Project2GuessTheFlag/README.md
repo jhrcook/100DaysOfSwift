@@ -31,3 +31,9 @@ Finished app! A coutry's name is displayed at the top, and the user must click t
 (Part of Project 3) I added a button in the navigation bar that shows the current score.
 
 <img src="progress_screenshots/Jun-30-2019 09-16-29.gif" width="300"/>
+
+**Day 4 - July 1, 2019**
+
+As a part of learning about Auto Layout in project 6, I enabled landscape views for the game.
+
+<img src="progress_screenshots/Jul-01-2019 16-55-22.gif" width="300"/>

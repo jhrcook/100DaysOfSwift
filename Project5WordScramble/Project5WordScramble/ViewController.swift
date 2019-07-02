@@ -86,7 +86,8 @@ class ViewController: UITableViewController {
     }
     
     func isOriginal(word: String) -> Bool {
-        return !usedWords.contains(word) && word != title
+        let usedWordsLowercase = usedWords.map { $0.lowercased() }
+        return !usedWordsLowercase.contains(word) && word != title && !word.isEmpty
     }
     
     func isReal(word: String) -> Bool {

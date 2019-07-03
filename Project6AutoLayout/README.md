@@ -1,4 +1,4 @@
-# 100 Days of Swift - "Auto Layout" iOS App
+# 100 Days of Swift - "Auto Layout" iOS Project
 
 ![100DaysOfCodeSwift](https://img.shields.io/badge/100DaysOfCode-Swift-FA7343.svg?style=flat&logo=swift)
 [![jhc github](https://img.shields.io/badge/GitHub-jhrcook-lightgrey.svg?style=flat&logo=github)](https://github.com/jhrcook)
@@ -12,7 +12,7 @@ I want to learn how to program in the Swift language. To this end, I will practi
 
 This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) called ["Auto Layout"](https://www.hackingwithswift.com/read/6/overview). It is a purely technical exercise to learn about using Auto Layout of Xcode to make better apps. I will post images below of the view of the app after each day's work.
 
-## Daily progress of "Guess the Flag" app
+## Daily progress of "Auto Layout project
 
 **Day 1 - July 1, 2019**
 

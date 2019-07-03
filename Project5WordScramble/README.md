@@ -12,7 +12,7 @@ I want to learn how to program in the Swift language. To this end, I will practi
 
 This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) called ["Word Scramble"](https://www.hackingwithswift.com/read/5/overview). It creates a simple anagram game and lets the user input words that can be constructed from the provided word. I will post images below of the view of the app after each day's work.
 
-## Daily progress of "Easy Browser" app
+## Daily progress of "Word Scramble" app
 
 **Day 1 - July 1, 2019**
 

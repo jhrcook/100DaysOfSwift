@@ -12,7 +12,7 @@ I want to learn how to program in the Swift language. To this end, I will practi
 
 This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) called ["Whitehouse Petitions"](https://www.hackingwithswift.com/read/7/overview). This is an app to interface with the petitions submitted to "We the people" Whitehouse peitions in the USA. I will post images below of the view of the app after each day's work.
 
-## Daily progress of "Guess the Flag" app
+## Daily progress of "Whitehouse Petitions" app
 
 **Day 1 - July 2, 2019**
 

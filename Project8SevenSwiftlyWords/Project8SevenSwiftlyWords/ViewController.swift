@@ -86,6 +86,8 @@ class ViewController: UIViewController {
         // input buttons
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsView.layer.borderColor = UIColor.lightGray.cgColor
+        buttonsView.layer.borderWidth = 1
         view.addSubview(buttonsView)
         
         NSLayoutConstraint.activate([
@@ -150,7 +152,9 @@ class ViewController: UIViewController {
     
     @objc func submitTapped(_ sender: UIButton) {
         guard let answerText = currentAnswer.text else { return }
-        if let solutionPostion = solutions.firstIndex(of: answerText) {
+        if answerText.isEmpty {
+            return
+        } else if let solutionPostion = solutions.firstIndex(of: answerText) {
             activatedButtons.removeAll()
             var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
             splitAnswers?[solutionPostion] = answerText
@@ -159,11 +163,17 @@ class ViewController: UIViewController {
             currentAnswer.text = ""
             score += 1
             
-            if score % 7 == 0 {
+            if answersLabel.text?.contains("letters") == false {
                 let alertController = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(alertController, animated: true)
             }
+        } else {
+            score -= 1
+            let alertController = UIAlertController(title: "Wrong", message: "Current score: \(score)", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Continue", style: .default))
+            alertController.addAction(UIAlertAction(title: "Clear", style: .cancel, handler: clearTappedWrapper))
+            present(alertController, animated: true)
         }
     }
     
@@ -173,6 +183,10 @@ class ViewController: UIViewController {
             button.isHidden = false
         }
         activatedButtons.removeAll()
+    }
+    
+    @objc func clearTappedWrapper(_ alert: UIAlertAction) {
+        clearTapped(UIButton())
     }
     
     func loadLevel() {

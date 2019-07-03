@@ -20,4 +20,7 @@ Finished the 7 Swiftly Words game app. I got a lot of practice in creating a lay
 
 <img src="progress_screenshots/Jul-03-2019 12-53-22.gif" width="300"/>
 
+I finished the challeneges, which included a pop-up when a wrong answer is submitted. I included two buttons, one to clear the current answer, and another to continue with the current letters entered. There are also point removed for wrong answers, which required me to change the criteria for checking if the level was complete.
+
+<img src="progress_screenshots/Jul-03-2019 15-21-55.gif" width="300"/>
 

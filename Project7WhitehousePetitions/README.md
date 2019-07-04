@@ -29,3 +29,7 @@ I completed the challenges: 1) add a credits pop-up, 2) add more information to 
 **Day 2 - July 3, 2019**
 
 Downloading and parsing the petitions is done in the background. There isn't anything new to demonstrate visually.
+
+**Day 3 - July 4, 2019**
+
+The filtering processes are also conducted in the background.

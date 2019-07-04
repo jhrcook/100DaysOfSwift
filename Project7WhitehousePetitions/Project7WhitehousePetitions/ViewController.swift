@@ -104,23 +104,25 @@ class ViewController: UITableViewController {
     }
     
     func filterPetitions(_ filterTerm: String) {
-        print("filterPetitions: term = \(filterTerm)")
-        let terms = filterTerm.split(separator: " ").map { $0.lowercased() }
-        if terms.isEmpty {
-            filteredPetitions = petitions
-        } else {
-            filteredPetitions.removeAll()
-            petitionLoop: for petition in petitions {
-                for term in terms {
-                    if petition.title.lowercased().contains(term) {
-                        print(petition.title)
-                        filteredPetitions.append(petition)
-                        continue petitionLoop
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            let terms = filterTerm.split(separator: " ").map { $0.lowercased() }
+            if terms.isEmpty {
+                self?.filteredPetitions = self!.petitions
+            } else {
+                self?.filteredPetitions.removeAll()
+                petitionLoop: for petition in self!.petitions {
+                    for term in terms {
+                        if petition.title.lowercased().contains(term) {
+                            self?.filteredPetitions.append(petition)
+                            continue petitionLoop
+                        }
                     }
                 }
             }
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
-        tableView.reloadData()
     }
 }
 

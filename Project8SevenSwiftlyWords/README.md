@@ -24,3 +24,4 @@ I finished the challeneges, which included a pop-up when a wrong answer is submi
 
 <img src="progress_screenshots/Jul-03-2019 15-21-55.gif" width="300"/>
 
+As a part of Project 9 on Grand Central Dispatch, the levels are now loaded in the background. (No visual changes.)

@@ -27,10 +27,15 @@ class ViewController: UITableViewController {
         let items = try! fm.contentsOfDirectory(atPath: path)
         
         // load pictures
-        for item in items {
-            if item.hasPrefix("nssl") {
+        performSelector(inBackground: #selector(loadPictures), with: items)
+    }
+    
+    // load the image files in the background
+    @objc func loadPictures(picturePaths: [String]) {
+        for picturePath in picturePaths {
+            if picturePath.hasPrefix("nssl") {
                 // add item to `pictures`
-                pictures.append(item)
+                pictures.append(picturePath)
             }
         }
         pictures.sort()

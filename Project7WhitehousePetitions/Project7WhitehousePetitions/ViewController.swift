@@ -30,14 +30,16 @@ class ViewController: UITableViewController {
             urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
         }
         
-        if let url = URL(string: urlString) {
-            if let data = try? Data(contentsOf: url) {
-                parse(json: data)
-            } else {
-                showError()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                    self?.parse(json: data)
+                    return
+                }
             }
-        } else {
-            showError()
+            DispatchQueue.main.async {
+                self?.showError()
+            }
         }
     }
     
@@ -46,7 +48,9 @@ class ViewController: UITableViewController {
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
             filteredPetitions = petitions
-            tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         } else {
             showError()
         }
@@ -71,9 +75,11 @@ class ViewController: UITableViewController {
     }
     
     func showError() {
-        let alertController = UIAlertController(title: "Loading Error", message: "There was a problem loading the feed. Please try again later.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alertController, animated: true)
+        DispatchQueue.main.async { [weak self] in
+            let alertController = UIAlertController(title: "Loading Error", message: "There was a problem loading the feed. Please try again later.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self?.present(alertController, animated: true)
+        }
     }
     
     @objc func creditPopup() {

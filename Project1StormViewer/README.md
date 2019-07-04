@@ -32,3 +32,7 @@ Finished the tutorial. The app presents the images in a table view with interact
 Added a bar button item that allows the user the share the image and copy the image name.
 
 <img src="progress_screenshots/Jun-29-2019 21-25-21.gif" width="300"/>
+
+**Day 4 - July 3, 2019**
+
+The image files are now loaded in the background (no visual change)

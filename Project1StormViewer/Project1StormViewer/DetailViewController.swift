@@ -24,11 +24,7 @@ class DetailViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         
         // bar button in the navigation bar
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .action,
-            target: self,
-            action: #selector(shareTapped)
-        )
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self,action: #selector(shareTapped))
         
         // load selected image data
         if let imageToLoad = selectedImage {

@@ -20,7 +20,9 @@ I have set up the basics of the IB, but not far enough to build.
 
 **Day 2 - July 5, 2019**
 
-<img src="progress_screenshots/" width="300"/>
+I finished the "Names to Faces" app. It allows the user to load photos from the photo library or take a new photo with the camera. The label can then be changed or the image deleted by tapping on the photo. The camera functionality is not shown here because it isn't available on the simulator, though I tested it on my iPhone. If the camera is available, then an alert controller pops up when the "+" button is tapped asking the user if they want to take a new photo or load from the photo library.
+
+<img src="progress_screenshots/Jul-05-2019 09-31-13.gif" width="300"/>
 
 
 

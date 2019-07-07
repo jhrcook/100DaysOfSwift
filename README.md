@@ -79,3 +79,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 31 - July 5, 2019:** I finished the "Names to Faces" app. It allows the user to load photos from the photo library or take a new photo with the camera. The label can then be changed or the image deleted by tapping on the photo. The camera functionality is not shown here because it isn't available on the simulator, though I tested it on my iPhone. If the camera is available, then an alert controller pops up when the "+" button is tapped asking the user if they want to take a new photo or load from the photo library.
 
 **Day 32 - July 6, 2019:** I began the pachinko game app. I have set up the app and learned how to add `SKSpriteNode` objects and have them act according to accurate physics. I also used an `SKAction` to have the glows at the bottom rotate constantly.
+
+**Day 33 - July 7, 2019:** We further learned about how to read collisions and add animations. I finished the challenges which included a few new game features, using the skills learned yesterday.

@@ -29,6 +29,7 @@
 		8419A1C022D1A67B000CEE74 /* ballCyan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8419A1B122D1A67B000CEE74 /* ballCyan@2x.png */; };
 		8419A1C122D1A67B000CEE74 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8419A1B222D1A67B000CEE74 /* background@2x.jpg */; };
 		8419A1C222D1A67B000CEE74 /* ballGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8419A1B322D1A67B000CEE74 /* ballGreen@2x.png */; };
+		8422303422D24158009913DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8422303222D24158009913DB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		8419A1B122D1A67B000CEE74 /* ballCyan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballCyan@2x.png"; sourceTree = "<group>"; };
 		8419A1B222D1A67B000CEE74 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		8419A1B322D1A67B000CEE74 /* ballGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballGreen@2x.png"; sourceTree = "<group>"; };
+		8422303222D24158009913DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8419A1A522D1A67B000CEE74 /* FireParticles.sks */,
+				8422303222D24158009913DB /* Assets.xcassets */,
 				8419A1A622D1A67B000CEE74 /* ballBlue@2x.png */,
 				8419A1A722D1A67B000CEE74 /* slotGlowBad@2x.png */,
 				8419A1A822D1A67B000CEE74 /* ballYellow@2x.png */,
@@ -185,6 +188,7 @@
 				8419A1BF22D1A67B000CEE74 /* ballRed@2x.png in Resources */,
 				8419A1B922D1A67B000CEE74 /* ballPurple@2x.png in Resources */,
 				8419A1BA22D1A67B000CEE74 /* slotBaseBad@2x.png in Resources */,
+				8422303422D24158009913DB /* Assets.xcassets in Resources */,
 				8419A1B822D1A67B000CEE74 /* slotBaseGood@2x.png in Resources */,
 				8419A15122D19CB5000CEE74 /* GameScene.sks in Resources */,
 				8419A1BE22D1A67B000CEE74 /* slotGlowGood@2x.png in Resources */,

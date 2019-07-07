@@ -18,7 +18,8 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 I have set up the app and learned how to add `SKSpriteNode` objects and have them act according to accurate physics. I also used an `SKAction` to have the glows at the bottom rotate constantly.
 
-<img src="progress_screenshots/ezgif.com-video-to-gif.gi" width="500"/>
+<img src="progress_screenshots/ezgif.com-video-to-gif.gif" width="500"/>
 
+We further learned about how to read collisions and add animations. I finished the challenges which included a few new game features, using the skills learned above.
 
-
+<img src="progress_screenshots/ezgif.com-video-to-gif_2.gif" width="500"/>

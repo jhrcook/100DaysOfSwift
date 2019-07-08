@@ -81,3 +81,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 32 - July 6, 2019:** I began the pachinko game app. I have set up the app and learned how to add `SKSpriteNode` objects and have them act according to accurate physics. I also used an `SKAction` to have the glows at the bottom rotate constantly.
 
 **Day 33 - July 7, 2019:** We further learned about how to read collisions and add animations. I finished the challenges which included a few new game features, using the skills learned yesterday. As a part of project 12, I used NSCoding to add data persistence to save photos and names.
+
+**Day 34 - July 8, 2019:** I added data persistence to "Names to Faces" (10b) using `Codable` (project 10a used `NSCoding`). The app now also properly deletes the actual image files when the image is removed from the `people` array.

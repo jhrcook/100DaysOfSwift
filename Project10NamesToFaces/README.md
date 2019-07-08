@@ -24,5 +24,8 @@ I finished the "Names to Faces" app. It allows the user to load photos from the 
 
 <img src="progress_screenshots/Jul-05-2019 09-31-13.gif" width="300"/>
 
+**Day 3 - July 7, 2019**
 
+As a part of project 12, I used NSCoding to add data persistence to save photos and names.
 
+<img src="progress_screenshots/Jul-07-2019 21-14-20.gif" width="300"/>

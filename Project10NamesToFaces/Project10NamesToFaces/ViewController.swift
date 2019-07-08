@@ -18,6 +18,14 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         // add photos buttons
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
+        
+        // load saved data
+        let defaults = UserDefaults.standard
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
+                people = decodedPeople
+            }
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -86,6 +94,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         people.append(person)
         collectionView.reloadData()
         
+        save()
         dismiss(animated: true)
     }
     
@@ -106,6 +115,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         alertController.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
             self?.people.remove(at: indexPath.item)
             self?.collectionView.reloadData()
+            self?.save()
         })
         
         present(alertController, animated: true)
@@ -120,9 +130,17 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             guard let newName = alertController?.textFields?[0].text else { return }
             person.name = newName
             self?.collectionView.reloadData()
+            self?.save()
         })
         
         present(alertController, animated: true)
+    }
+    
+    func save() {
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        }
     }
 }
 

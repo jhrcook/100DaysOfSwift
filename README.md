@@ -83,3 +83,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 33 - July 7, 2019:** We further learned about how to read collisions and add animations. I finished the challenges which included a few new game features, using the skills learned yesterday. As a part of project 12, I used NSCoding to add data persistence to save photos and names.
 
 **Day 34 - July 8, 2019:** I added data persistence to "Names to Faces" (10b) using `Codable` (project 10a used `NSCoding`). The app now also properly deletes the actual image files when the image is removed from the `people` array.
+
+**Day 35 - July 9, 2019:** I worked on the Plant Tracker app for my hour of Swift today (much more than just one hour). See the app at this [repository](https://github.com/jhrcook/PlantTracker).

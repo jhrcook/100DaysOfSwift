@@ -85,3 +85,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 34 - July 8, 2019:** I added data persistence to "Names to Faces" (10b) using `Codable` (project 10a used `NSCoding`). The app now also properly deletes the actual image files when the image is removed from the `people` array.
 
 **Day 35 - July 9, 2019:** I worked on the Plant Tracker app for my hour of Swift today (much more than just one hour). See the app at this [repository](https://github.com/jhrcook/PlantTracker).
+
+**Day 36 - July 10, 2019:** I continued working on the Plant Tracker app. I actually accomplished a lot including implementing and reacting to changes in `UISegementedControl` and `UITextField` objects. I also had to figure out how to save and load data with each new controller.

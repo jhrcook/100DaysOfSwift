@@ -87,3 +87,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 35 - July 9, 2019:** I worked on the Plant Tracker app for my hour of Swift today (much more than just one hour). See the app at this [repository](https://github.com/jhrcook/PlantTracker).
 
 **Day 36 - July 10, 2019:** I continued working on the Plant Tracker app. I actually accomplished a lot including implementing and reacting to changes in `UISegementedControl` and `UITextField` objects. I also had to figure out how to save and load data with each new controller.
+
+**Day 37 - July 11, 2019:** I got a lot of practice making a layout in code - the tutorial created it in the IB, but I found it easier, and more adaptable to build it in `viewDidLoad()`. I did run into a problem with showing the label in a `UIButton`, but figured it out by setting the `UIButton(.roundedRect)` I got a refresher on loading images from the library. Finally, I learned about the basics of Core Images.

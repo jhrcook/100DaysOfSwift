@@ -89,3 +89,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 36 - July 10, 2019:** I continued working on the Plant Tracker app. I actually accomplished a lot including implementing and reacting to changes in `UISegementedControl` and `UITextField` objects. I also had to figure out how to save and load data with each new controller.
 
 **Day 37 - July 11, 2019:** I got a lot of practice making a layout in code - the tutorial created it in the IB, but I found it easier, and more adaptable to build it in `viewDidLoad()`. I did run into a problem with showing the label in a `UIButton`, but figured it out by setting the `UIButton(.roundedRect)` I got a refresher on loading images from the library. Finally, I learned about the basics of Core Images.
+
+**Day 38 - July 12, 2019:** I looked at a few CocoaPod libraries, namely [SnapKit](https://github.com/SnapKit/SnapKit) and [ParallaxHeader](https://github.com/romansorochak/ParallaxHeader). I also finished up the Instafilter app, just a few odds and ends, namely to save the adjusted image.

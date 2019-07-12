@@ -75,7 +75,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         changeFilterButton.leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor).isActive = true
         changeFilterButton.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         changeFilterButton.widthAnchor.constraint(equalToConstant: 150.0).isActive = true
-        changeFilterButton.setTitle("Change Filter", for: .normal)
+        changeFilterButton.setTitle(currentFilter.name, for: .normal)
         changeFilterButton.titleLabel?.textAlignment = .center
         changeFilterButton.addTarget(self, action: #selector(changeFilter), for: .touchUpInside)
         
@@ -110,11 +110,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         currentFilter = CIFilter(name: actionTitle)
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        changeFilterButton.setTitle(currentFilter.name, for: .normal)
         applyProcessing()
     }
 
     @objc func save() {
-        print("Save")
+        guard let image = imageView.image else {
+            let alertController = UIAlertController(title: "No image", message: "There is no image to save.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alertController, animated: true)
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            let alertController = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alertController, animated: true)
+        } else {
+            let alertController = UIAlertController(title: "Saved!", message: "The image was saved to your library.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alertController, animated: true)
+        }
     }
     
     @objc func importPicture() {
@@ -150,6 +169,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.imageView.image = processedImage
         }
     }
-
+    
+    
 }
 

@@ -19,3 +19,9 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 I got a lot of practice making a layout in code - the tutorial created it in the IB, but I found it easier, and more adaptable to build it in `viewDidLoad()`. I did run into a problem with showing the label in a `UIButton`, but figured it out by setting the `UIButton(.roundedRect)` I got a refresher on loading images from the library. Finally, I learned about the basics of Core Images.
 
 <img src="progress_screenshots/Jul-11-2019 09-26-39.gif" width="300"/>
+
+**Day 2 - July 12, 2019**
+
+Just a few finishing touches, namely to save to modified image to the photos library. A few other minor addtions: there is an error message if the user tries to save with no image, the filter button name is the name of the selected filter.
+
+<img src="progress_screenshots/Jul-12-2019 08-58-19.gif" width="300"/>

@@ -149,9 +149,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         currentImage = image
         
         let beginImage = CIImage(image: currentImage)
-        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         
-        applyProcessing()
+        imageView.alpha = 0.0
+        self.currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        print("current imageView alpha: \(imageView.alpha)")
+        print("have set new filter")
+        UIView.animate(withDuration: 0.2, delay: 0, options: [], animations: { self.imageView.alpha = 1.0 }) { _ in self.applyProcessing() }
     }
     
     func applyProcessing() {

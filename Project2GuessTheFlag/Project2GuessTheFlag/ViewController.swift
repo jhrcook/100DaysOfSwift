@@ -58,6 +58,11 @@ class ViewController: UIViewController {
         // shuffle the countries array
         countries.shuffle()
         
+        // reset buttons to normal size
+        button1.transform = .identity
+        button2.transform = .identity
+        button3.transform = .identity
+        
         // set the first three flags as the button images
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
@@ -73,6 +78,10 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         // increment number of rounds played
         numberOfRoundsPlayed += 1
+        
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: [], animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        })
         
         // custom message for alert if wrong answer
         var acTitle: String

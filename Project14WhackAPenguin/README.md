@@ -18,5 +18,10 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 
 The general set up is ready. We will be using cropping masks to hide the penguins, though I'm still not confident in what that means. I will have to experiment a little to become more comfortable with them.
 
-<img src="progress_screenshots/IMG_5933C1864A1D-1.jpeg" width="300"/>
+<img src="progress_screenshots/IMG_5933C1864A1D-1.jpeg" width="500"/>
 
+**Day 2 - July 13, 2019**
+
+Completed the app, except for the challenges at the end of the section. I learned a few more methods available for `SKActions` and how to think about the gameplay.
+
+<img src="progress_screenshots/ezgif.com-video-to-gif.gif" width="500"/>

@@ -10,7 +10,7 @@ End Date: September 13, 2019**
 
 I want to learn how to program in the Swift language. To this end, I will practice coding in Swift for at least one hour every day for 100 days.
 
-This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) called ["Capital Cities"](https://www.hackingwithswift.com/read/15/overview). This app is designed to teach me about using MapKit. I will post images below of the view of the app after each day's work.
+This is an example iOS project produced by [*Hacking with Swift*](https://www.hackingwithswift.com/read) called ["Capital Cities"](https://www.hackingwithswift.com/read/16/overview). This app is designed to teach me about using MapKit. I will post images below of the view of the app after each day's work.
 
 ## Daily progress of "Capital Cities" app
 

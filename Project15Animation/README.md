@@ -19,3 +19,4 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 It was a  pretty simple project that taught me about Core Animation. In addition to the app shown below, I also went back to Projects 2, 8, and 13 and add a few small animations.
 
 <img src="progress_screenshots/ezgif.com-video-to-gif.gif" width="500"/>
+

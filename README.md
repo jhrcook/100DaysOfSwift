@@ -97,3 +97,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 40 - July 14, 2019:** I completed the simple app and the challenges meant to teach me how to use Core Animations. The challenges, to go back to older projects and insert animations, were useful because I had to think about where to put the animations such that they would be logical and stable.
 
 **Day 41 - July 15, 2019:** It was a  pretty simple project that taught me about MapKit. I learned about how to add pins and modify their pop-ups when tapped, including adding text and buttons (along with their selector functions). I also modified the pin colors to be randomly chosen. There is a navigation button to change the type of map view. I also started a fresh game Xcode project for the next game app project, "Space Race".
+
+**Day 42 - July 16, 2019:** I finished the Space Race game. I learned a bit more about SpriteKit, and got some good  practice dealing with touches as  I tried to implement a few new features on my own. Overall, a pretty simple app that demonstrates the power of SpriteKit.

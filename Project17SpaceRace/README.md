@@ -20,4 +20,8 @@ I got a fresh Xcode game project set-up. Nothing to show just yet.
 
 **Day 2 - July 16, 2019**
 
+I learned a bit more about SpriteKit, and got some good  practice dealing with touches as  I tried to implement a few new features on my own. Overall, a pretty simple app that demonstrates the power of SpriteKit.
+
+<img src="progress_screenshots/ezgif.com-video-to-gif.gif" width="500"/>
+
 

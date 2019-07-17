@@ -100,5 +100,4 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 
 **Day 42 - July 16, 2019:** I finished the Space Race game. I learned a bit more about SpriteKit, and got some good  practice dealing with touches as  I tried to implement a few new features on my own. Overall, a pretty simple app that demonstrates the power of SpriteKit.
 
-**Day 43 - July 17, 2019:** I learned about using `assert()`, breakpoints, and view debugging to debug an app. Whoever made the 3D view debugger deserves a medal!
- 
+**Day 43 - July 17, 2019:** I learned about using `assert()`, breakpoints, and view debugging to debug an app. Whoever made the 3D view debugger deserves a medal! I continued onto the next project, "Project 19 JavaScript Injection." The main focus of the app is the extension, but I went ahead and made the app portion a little more interesting by hosting a disco! So far, we set up the framework for the Safari extension, loading the first item, but the extension doesn't do anything.

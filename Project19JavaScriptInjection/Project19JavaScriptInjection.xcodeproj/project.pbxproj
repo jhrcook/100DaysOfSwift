@@ -16,6 +16,8 @@
 		84591A2E22DF81B5004C3E2B /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84591A2D22DF81B5004C3E2B /* ActionViewController.swift */; };
 		84591A3122DF81B5004C3E2B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84591A2F22DF81B5004C3E2B /* MainInterface.storyboard */; };
 		84591A3522DF81B5004C3E2B /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84591A2922DF81B5004C3E2B /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84ECA38022E0C174008E21EE /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 84ECA37F22E0C174008E21EE /* Action.js */; };
+		84ECA38222E0D460008E21EE /* WebsiteJavaScriptCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECA38122E0D460008E21EE /* WebsiteJavaScriptCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		84591A2D22DF81B5004C3E2B /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		84591A3022DF81B5004C3E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		84591A3222DF81B5004C3E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84ECA37F22E0C174008E21EE /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		84ECA38122E0D460008E21EE /* WebsiteJavaScriptCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteJavaScriptCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +115,10 @@
 			children = (
 				84591A2B22DF81B5004C3E2B /* Media.xcassets */,
 				84591A2D22DF81B5004C3E2B /* ActionViewController.swift */,
+				84ECA38122E0D460008E21EE /* WebsiteJavaScriptCode.swift */,
 				84591A2F22DF81B5004C3E2B /* MainInterface.storyboard */,
 				84591A3222DF81B5004C3E2B /* Info.plist */,
+				84ECA37F22E0C174008E21EE /* Action.js */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ECA38022E0C174008E21EE /* Action.js in Resources */,
 				84591A2C22DF81B5004C3E2B /* Media.xcassets in Resources */,
 				84591A3122DF81B5004C3E2B /* MainInterface.storyboard in Resources */,
 			);
@@ -230,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84591A2E22DF81B5004C3E2B /* ActionViewController.swift in Sources */,
+				84ECA38222E0D460008E21EE /* WebsiteJavaScriptCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

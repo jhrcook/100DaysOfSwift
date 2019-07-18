@@ -21,3 +21,12 @@ The main focus of the app is the extension, but I went ahead and made the app po
 <img src="progress_screenshots/Jul-17-2019 09-27-24.gif" width="300"/>
 
 
+** Day 2 - July 16, 2019**
+
+I finished the app such that JavaScript code is run in a Safari extension.
+
+<img src="progress_screenshots/Jul-18-2019 09-16-36.gif" width="300"/>
+
+I also completed the challenge problems which included adding a button to add example code. Also, the data for each website is saved and automatically loaded the next time the extension is used on the same webpage.
+
+<img src="progress_screenshots/Jul-18-2019 09-55-18.gif" width="300"/>

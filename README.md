@@ -103,3 +103,6 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 43 - July 17, 2019:** I learned about using `assert()`, breakpoints, and view debugging to debug an app. Whoever made the 3D view debugger deserves a medal! I continued onto the next project, "Project 19 JavaScript Injection." The main focus of the app is the extension, but I went ahead and made the app portion a little more interesting by hosting a disco! So far, we set up the framework for the Safari extension, loading the first item, but the extension doesn't do anything.
 
 **Day 44 - July 18, 2019:** I finished the app such that JavaScript code is run in a Safari extension. I also completed the challenge problems which included adding a button to add example code. Also, the data for each website is saved and automatically loaded the next time the extension is used on the same webpage.
+
+**Day 45 - July 19, 2019:** I finished the Fireworks Night app. It's pretty simple, but I was able to learn more about the logic used when creating a game and using SpriteKit.
+ 

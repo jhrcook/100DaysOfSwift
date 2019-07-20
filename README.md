@@ -105,4 +105,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 44 - July 18, 2019:** I finished the app such that JavaScript code is run in a Safari extension. I also completed the challenge problems which included adding a button to add example code. Also, the data for each website is saved and automatically loaded the next time the extension is used on the same webpage.
 
 **Day 45 - July 19, 2019:** I finished the Fireworks Night app. It's pretty simple, but I was able to learn more about the logic used when creating a game and using SpriteKit.
- 
+
+**Day 46 - July 20, 2019:** I finished project 21, an introduction to sending and responding to local notifications.

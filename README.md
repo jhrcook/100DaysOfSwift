@@ -107,3 +107,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 45 - July 19, 2019:** I finished the Fireworks Night app. It's pretty simple, but I was able to learn more about the logic used when creating a game and using SpriteKit.
 
 **Day 46 - July 20, 2019:** I finished project 21, an introduction to sending and responding to local notifications.
+
+**Day 47 - July 21, 2019:** I worked on the Plant Tracker app. I restarted the constraints by implementing them in code rather than the IB; I found using `SnapKit` **much** easier!

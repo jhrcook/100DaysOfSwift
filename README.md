@@ -109,3 +109,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 46 - July 20, 2019:** I finished project 21, an introduction to sending and responding to local notifications.
 
 **Day 47 - July 21, 2019:** I worked on the Plant Tracker app. I restarted the constraints by implementing them in code rather than the IB; I found using `SnapKit` **much** easier!
+
+**Day 48 - July 22, 2019:** I learned how to detect and react to an iBeacon.

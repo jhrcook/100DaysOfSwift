@@ -19,3 +19,7 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 I set up the app and created the first few functions. Nothing much to show except for the blank playing view.
 
 <img src="progress_screenshots/IMG_710465D622D2-1.jpeg" width="500"/>
+
+I finished the standard gameplay. I learned a lot about the logic used to design a game including how to keep track of all the nodes, removing those out of the frame. Also, I learned how to create a path using `UIBezierPath()`.
+
+<img src="progress_screenshots/ezgif.com-video-to-gif.gif" width="500"/>

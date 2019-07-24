@@ -113,3 +113,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 48 - July 22, 2019:** I learned how to detect and react to an iBeacon. I also started the next project, a game called Swifty Ninja. I set up the app and created the first few functions. Nothing much to show except for the blank playing view.
 
 **Day 49 - July 23, 2019:** I finished the standard gameplay of Swifty Ninja. I learned a lot about the logic used to design a game including how to keep track of all the nodes, removing those out of the frame. Also, I learned how to create a path using `UIBezierPath()`.
+
+**Day 50 - July 24, 2019:** I completed 2 of the 3 challenges in the end of the Swifty Ninja project. The first was to remove absolute frame values with those that adjust to the frame of the device. The second was to show a Game Over label. I also completed the playground to learn about strings and `NSAttributedString`s.

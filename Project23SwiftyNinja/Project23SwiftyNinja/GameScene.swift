@@ -280,16 +280,23 @@ class GameScene: SKScene {
         }
         
         // position the launch
-        let randomPosition = CGPoint(x: Int.random(in: 64...960), y: -128)
+        
+        // location parameters (the depedent parameters adjust according to screen size)
+        let launchInset = 64
+        let frameWidth = Int((view?.frame.width)!)
+        let numLuanchIntervals = 4
+        
+
+        let randomPosition = CGPoint(x: Int.random(in: launchInset...(frameWidth - launchInset)), y: -128)
         enemy.position = randomPosition
         
         let  randomAngularVelocity = CGFloat.random(in: -3...3)
         let randomXVelocity: Int
-        if randomPosition.x < 256 {
+        if randomPosition.x < CGFloat(1 * frameWidth / numLuanchIntervals) {
             randomXVelocity = Int.random(in: 8...15)
-        } else if randomPosition.x < 512 {
+        } else if randomPosition.x < CGFloat(2 * frameWidth / numLuanchIntervals) {
             randomXVelocity = Int.random(in: 3...5)
-        } else if randomPosition.x < 768 {
+        } else if randomPosition.x < CGFloat(3 * frameWidth / numLuanchIntervals) {
             randomXVelocity = -Int.random(in: 3...5)
         } else {
             randomXVelocity = -Int.random(in: 8...15)
@@ -429,6 +436,13 @@ class GameScene: SKScene {
                 liveImage.texture = SKTexture(imageNamed: "sliceLifeGone")
             }
         }
+        
+        let gameOver = SKLabelNode(text: "Game Over")
+        gameOver.verticalAlignmentMode = .center
+        gameOver.horizontalAlignmentMode = .center
+        gameOver.fontSize = 75.0
+        gameOver.position = CGPoint(x: (view?.frame.width)! / 2, y: (view?.frame.height)! / 2)
+        addChild(gameOver)
     }
     
 }

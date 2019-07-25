@@ -115,3 +115,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 49 - July 23, 2019:** I finished the standard gameplay of Swifty Ninja. I learned a lot about the logic used to design a game including how to keep track of all the nodes, removing those out of the frame. Also, I learned how to create a path using `UIBezierPath()`.
 
 **Day 50 - July 24, 2019:** I completed 2 of the 3 challenges in the end of the Swifty Ninja project. The first was to remove absolute frame values with those that adjust to the frame of the device. The second was to show a Game Over label. I also completed the playground to learn about strings and `NSAttributedString`s.
+
+**Day 51 - July 25, 2019:** I created an app that loads images from the Photos library and shares them to all connected devices. In the example, I create a network between the iOS Simulator and my iPhone 6S, using the iPhone as the host. I then load an image from the library, and it instantly appears on the simulator. The same can be done in other direction, too.

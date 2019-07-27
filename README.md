@@ -119,3 +119,5 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 **Day 51 - July 25, 2019:** I created an app that loads images from the Photos library and shares them to all connected devices. In the example, I create a network between the iOS Simulator and my iPhone 6S, using the iPhone as the host. I then load an image from the library, and it instantly appears on the simulator. The same can be done in other direction, too.
 
 **Day 52 - July 26, 2019:** I worked on the Plant Tracker app again today. I made good progress on the the library detail view controller, finally getting a simple, understandable, stable, and predictable sticky header with parallax, zoom, and a blur effect.
+
+**Day 53 - July 27, 2109:** I continued working on the Plant tracker app for a few hours today. I was able to add in the three information views to the detail view controller for the Library tab. After fixing a few constraints and the size of the main scroll view's content, the scrolling of the main scroll view and the subview tables was intuitive and satistfactory.

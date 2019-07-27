@@ -49,6 +49,11 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
         let alertController = UIAlertController(title: "Connect to others", message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Host a session", style: .default, handler: startHosting))
         alertController.addAction(UIAlertAction(title: "Join a session", style: .default, handler: joinSession))
+        if mcSession != nil {
+            if mcSession!.connectedPeers.count > 0 {
+                alertController.addAction(UIAlertAction(title: "Show all peers", style: .default, handler: showConnectedPeers))
+            }
+        }
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alertController, animated: true)
     }
@@ -68,6 +73,17 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
         let mcBrowser = MCBrowserViewController(serviceType: "hws-project25", session: mcSession!)
         mcBrowser.delegate = self
         present(mcBrowser, animated: true)
+    }
+    
+    
+    func showConnectedPeers(_ alert: UIAlertAction) {
+        if mcSession != nil {
+            var peersDisplayNames = [String]()
+            for peer in mcSession!.connectedPeers { peersDisplayNames.append(peer.displayName) }
+            let alertController = UIAlertController(title: "Connected peers", message: peersDisplayNames.joined(separator: ", "), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alertController, animated: true)
+        }
     }
     
     
@@ -127,6 +143,9 @@ class ViewController: UICollectionViewController, UINavigationControllerDelegate
             print("Connecting: \(peerID.displayName)")
         case .notConnected:
             print("Not connected: \(peerID.displayName)")
+            let alertController = UIAlertController(title: "Disconnected", message: "\(peerID.displayName) has disconnected", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alertController, animated: true)
         @unknown default:
             print("unknown state of peer: \(peerID.displayName)")
         }

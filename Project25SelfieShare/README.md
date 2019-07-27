@@ -23,5 +23,8 @@ left: iPhone 6S - right: simulator (iPhone XR)
 <img src="progress_screenshots/ezgif.com-video-to-gif_phone.gif" height="500"/>
 <img src="progress_screenshots/Jul-25-2019 08-05-09_simulator.gif" height="500"/>'
 
+**Day 2 - July 27, 2019**
 
+I finished two of the three challenges for the Selfie Share app (the third was much more invovled than I really desired). The first challenge was to display an alert when someone disconnects: this was implemented in the switch-case statement in `session(:peer:didChange)`. The second challenge was to add a button to display all phones connected to the session: if there were multiple connected peers, an additional button was available in the `+` alert controller that would present another alert with effectively the following expression `[peerID.displayName].joined(", ")`.
 
+<img src="progress_screenshots/Jul-27-2019 19-04-17.gif" height="500"/>

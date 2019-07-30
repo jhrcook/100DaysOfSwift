@@ -120,8 +120,12 @@ I am now working through example iOS projects by [*Hacking with Swift*](https://
 
 **Day 52 - July 26, 2019:** I worked on the Plant Tracker app again today. I made good progress on the the library detail view controller, finally getting a simple, understandable, stable, and predictable sticky header with parallax, zoom, and a blur effect.
 
-**Day 53 - July 27, 2109:** I continued working on the Plant tracker app for a few hours today. I was able to add in the three information views to the detail view controller for the Library tab. After fixing a few constraints and the size of the main scroll view's content, the scrolling of the main scroll view and the subview tables was intuitive and satistfactory.
+**Day 53 - July 27, 2109:** I continued working on the Plant Tracker app for a few hours today. I was able to add in the three information views to the detail view controller for the Library tab. After fixing a few constraints and the size of the main scroll view's content, the scrolling of the main scroll view and the subview tables was intuitive and satistfactory.
 
 I finished two of the three challenges for the Selfie Share app (the third was much more invovled than I really desired). The first challenge was to display an alert when someone disconnects: this was implemented in the switch-case statement in `session(:peer:didChange)`. The second challenge was to add a button to display all phones connected to the session: if there were multiple connected peers, an additional button was available in the `+` alert controller that would present another alert with effectively the following expression `[peerID.displayName].joined(", ")`.
 
-**Day 54 - July 28, 2019:** I started the Marble Maze game app. I have completed most of the set-up including loading level one, adding physics bodies to all neccesary components, and a player that can roll around in response to touch on the simulator or tilt on an iPad. I got a quick introduction to `CoreMotion`, too.
+**Day 54 - July 28, 2019:** I worked on the Plant Tracker app for a few hours in the morning and was able to add a third-party segmented controller to replace the UIKit standard one. I also added the information to the general information table view subview in the detail controller.
+
+**Day 55 - July 29, 2019:** I started the Marble Maze game app. I have completed most of the set-up including loading level one, adding physics bodies to all neccesary components, and a player that can roll around in response to touch on the simulator or tilt on an iPad. I got a quick introduction to `CoreMotion`, too.
+
+**Day 56 - July 30, 2019:** I continued working on the Plant Traker before work. I got the keyboard interface with the Notes section working. Any text entered into the Notes is now saved to the `Plant` instance and all of data is saved when the user navigates back to the Library view controller.

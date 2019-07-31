@@ -129,3 +129,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 55 - July 29, 2019:** I started the Marble Maze game app. I have completed most of the set-up including loading level one, adding physics bodies to all neccesary components, and a player that can roll around in response to touch on the simulator or tilt on an iPad. I got a quick introduction to `CoreMotion`, too.
 
 **Day 56 - July 30, 2019:** I continued working on the Plant Traker before work. I got the keyboard interface with the Notes section working. Any text entered into the Notes is now saved to the `Plant` instance and all of data is saved when the user navigates back to the Library view controller.
+
+**Day 57 - July 31, 2019:** I continued working on the Plant Tracker before work. I added the image picker last night and and image viewer this morning. The user can also delete the plant from the library within the detail view controller.

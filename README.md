@@ -132,4 +132,6 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 
 **Day 57 - July 31, 2019:** I continued working on the Plant Tracker before work. I added the image picker last night and and image viewer this morning. The user can also delete the plant from the library within the detail view controller.
 
-**Day 58 - August 1, 2019:** More work on the app including adding options to the iOS Settings app and accessing the values in the app.
+**Day 58 - August 1, 2019:** More work on the app including adding options to the iOS Settings app and accessing the values in the app. I also added some asynchronous tasks for handling images and files in the background.
+
+**Day 59 - August 2, 2019:** Instead of doing any coding in the morning, I worked through the [RxSwift](https://github.com/ReactiveX/RxSwift) playground tutorial. I have a better understanding of Rx and the general workflow. The next step will be to see it in action in an example app and try to use it in my Plant Tracker app.

@@ -137,3 +137,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 59 - August 2, 2019:** Instead of doing any coding in the morning, I worked through the [RxSwift](https://github.com/ReactiveX/RxSwift) playground tutorial. I have a better understanding of Rx and the general workflow. The next step will be to see it in action in an example app and try to use it in my Plant Tracker app.
 
 **Day 60 - August 3, 2019:** I continued work on the Plant Tracker iOS app. There were a bunch of background fixes dealing with saving and loading images and asynchronous processing. I also implemented a paging image viewer.
+
+**Day 61 - August 4, 2019:** I did a whole bunch on the Plant Tracker iOS app. The main success of the day was refactoring how I saved images as they were being selected. It was a lot more work, but the app is much smoother, faster, and more stable now, so it was definitely worth it. I also added an icon image to the Library tab and a new UI feature to the Header in the Library detail view controller.

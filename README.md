@@ -141,3 +141,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 61 - August 4, 2019:** I did a whole bunch on the Plant Tracker iOS app. The main success of the day was refactoring how I saved images as they were being selected. It was a lot more work, but the app is much smoother, faster, and more stable now, so it was definitely worth it. I also added an icon image to the Library tab and a new UI feature to the Header in the Library detail view controller.
 
 **Day 62 - August 5, 2019:** I made a custom transition in the Plant Tracker app. It zooms into an image held in a collection view cell. It's pretty rudimentary, but I learned the basics of transitions in iOS. 
+
+**Day 63 - August 6, 2019:** Spent 3 hours this morning on trying to understand how to implement the transition that I want. I still have a ways to go, but I'm still learning.

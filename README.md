@@ -145,3 +145,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 63 - August 6, 2019:** Spent 3 hours this morning on trying to understand how to implement the transition that I want. I still have a ways to go, but I'm still learning.
 
 **Day 64 - August 7, 2019:** Still working on the cutom transition animations. I started a new iOS app where I can fully develop the system without breaking the Plant Tracker and without all of the other stuff in the way. I am fully documenting the entire system. Here is a link to that repository: [PhotoZoomAnimator](https://github.com/jhrcook/PhotoZoomAnimator/tree/master).
+
+**Day 65 - August 8, 2019:** I finally finished the zoom animation for the transition in the PhotoZoomAnimator app. I spent the first 1.5 hours of the morning finishing up my thorough documentation of the system. I merged the PR to `master` on the git repo, [PhotoZoomAnimator](https://github.com/jhrcook/PhotoZoomAnimator/tree/master).

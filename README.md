@@ -149,3 +149,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 65 - August 8, 2019:** I finally finished the zoom animation for the transition in the PhotoZoomAnimator app. I spent the first 1.5 hours of the morning finishing up my thorough documentation of the system. I merged the PR to `master` on the git repo, [PhotoZoomAnimator](https://github.com/jhrcook/PhotoZoomAnimator/tree/master).
 
 **Day 66 - August 9, 2019:** I finished the interactive transtion that mimics the Photos app in iOS. It is fully document and explained in the [repository](https://github.com/jhrcook/PhotoZoomAnimator).
+
+**Day 67 - August 10, 2019:** I implemented the interactive zoom transition from the PhotoZoomAnimator test app this morning - it worked flawlessly from the start! I finally returned to the Marble Maze game. I finished up the standard portion of the tutorial to react to the collision of two nodes. The first task was to figure out which was the marble and then react to what the other one was (eg. if the other node is a star, the score increments by one).

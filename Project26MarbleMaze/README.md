@@ -19,3 +19,11 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 I have completed most of the set-up including loading level one, adding physics bodies to all neccesary components, and a player that can roll around in response to touch on the simulator or tilt on an iPad. I got a quick introduction to `CoreMotion`, too.
 
 <img src="progress_screenshots/Simulator Screen Shot - iPad (5th generation) - 2019-07-29 at 07.42.09.png" height="500"/>
+
+**Day 2 - August 10, 2019**
+
+Finished up the standard portion of the tutorial to react to the collision of two nodes. The first task was to figure out which was the marble and then react to what the other one was (eg. if the other node is a star, the score increments by one).
+
+<img src="progress_screenshots/ezgif.com-video-to-gif.gif" height="500"/>
+
+**NB:** I did not finish up the challenge problems for this app because I am not too interested in game design, at the moment.

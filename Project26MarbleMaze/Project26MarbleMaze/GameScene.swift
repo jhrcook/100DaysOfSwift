@@ -20,7 +20,7 @@ enum CollisionTypes: UInt32 {
 }
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var lastTouchPosition: CGPoint?
     
@@ -28,9 +28,19 @@ class GameScene: SKScene {
     
     var motionManager: CMMotionManager!
     
+    var scoreLabel: SKLabelNode!
+    
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
+    
+    var gameIsOver = false
     
     override func didMove(to view: SKView) {
         
+        physicsWorld.contactDelegate = self
         physicsWorld.gravity = .zero
         
         motionManager = CMMotionManager()
@@ -41,6 +51,13 @@ class GameScene: SKScene {
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        score = 0
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.position = CGPoint(x: 16, y: 16)
+        scoreLabel.zPosition = 2
+        addChild(scoreLabel)
         
         loadLevel()
         createPlayer()
@@ -150,7 +167,45 @@ class GameScene: SKScene {
     }
     
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        guard let nodeA = contact.bodyA.node else { return }
+        guard let nodeB = contact.bodyB.node else { return }
+        
+        if nodeA == player {
+            playerCollided(with: nodeB)
+        } else if nodeB == player {
+            playerCollided(with: nodeA)
+        }
+    }
+    
+    func playerCollided(with node: SKNode) {
+        if node.name == "vortex" {
+            gameIsOver = true
+            player.physicsBody?.isDynamic = false
+            score -= 1
+            
+            let animationDuration: TimeInterval = 0.25
+            let move = SKAction.move(to: node.position, duration: animationDuration)
+            let scale = SKAction.scale(to: 0.0001, duration: animationDuration)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            
+            player.run(sequence) { [weak self] in
+                self?.createPlayer()
+                self?.gameIsOver = false
+            }
+        } else if node.name == "star" {
+            node.removeFromParent()
+            score += 1
+        } else if node.name == "finish" {
+            // TODO: go to next level
+        }
+    }
+    
+    
     override func update(_ currentTime: TimeInterval) {
+        if gameIsOver { return }
+        
     #if targetEnvironment(simulator)
         // for touch hack in simulator
         if let currentTouch = lastTouchPosition {

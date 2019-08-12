@@ -154,4 +154,4 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 
 **Day 68 - August 11, 2019:** I refactored the Plant Tracker App *a lot* (!). While splitting up some bloated "Massive View Controllers", I got a lot of practice in handling segues and delegates. I also made some custom view subclasses, giving me great practive in using MVC.
 
-**Day 69 - August 12, 2019:** I finished the core portion of Project 27 on drawing with Core Graphics. It was interesting to see how I could program in specific shapes and designs using Core Graphics.
+**Day 69 - August 12, 2019:** I finished the core portion of Project 27 on drawing with Core Graphics. It was interesting to see how I could program in specific shapes and designs using Core Graphics. I also spent an hour in the afternoon learning about and using Unified Logging to add some logging to a few view controllers of Plant Tracker.

@@ -153,3 +153,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 67 - August 10, 2019:** I implemented the interactive zoom transition from the PhotoZoomAnimator test app this morning - it worked flawlessly from the start! I finally returned to the Marble Maze game. I finished up the standard portion of the tutorial to react to the collision of two nodes. The first task was to figure out which was the marble and then react to what the other one was (eg. if the other node is a star, the score increments by one).
 
 **Day 68 - August 11, 2019:** I refactored the Plant Tracker App *a lot* (!). While splitting up some bloated "Massive View Controllers", I got a lot of practice in handling segues and delegates. I also made some custom view subclasses, giving me great practive in using MVC.
+
+**Day 69 - August 12, 2019:** I finished the core portion of Project 27 on drawing with Core Graphics. It was interesting to see how I could program in specific shapes and designs using Core Graphics.

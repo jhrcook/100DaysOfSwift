@@ -19,3 +19,7 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 The base project was to create a secret text view that stored the text in Keychain. Only through biometric identifiaction (either Face ID or Touch ID) could the text be read. Another important feature was to ensure that the text was hidden if the app was navigated away from.
 
 <img src="progress_screenshots/ezgif.com-video-to-gif.gif" height="300"/>
+
+For the Challenges, I added a "Done" button to hide the secret text when tapped. I also added a password system for when biometric identification is not available.
+
+<img src="progress_screenshots/Aug-13-2019 19-36-16.gif" height="300"/>

@@ -17,7 +17,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         title = "Nothing to see here"
-                
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveSecretMessage))
+        
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
@@ -67,7 +69,8 @@ class ViewController: UIViewController {
             }
         } else {
             let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authemtification.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            ac.addAction(UIAlertAction(title: "Use password", style: .default, handler: enterByPassword))
+            ac.addAction(UIAlertAction(title: "Give up", style: .cancel))
             self.present(ac, animated: true)
         }
     }
@@ -75,6 +78,7 @@ class ViewController: UIViewController {
 
 
 fileprivate let secreteMessageKey = "SecretMessage"
+fileprivate let passwordKey = "NewPassword"
 
 extension ViewController {
     
@@ -92,6 +96,30 @@ extension ViewController {
         secret.resignFirstResponder()
         secret.isHidden = true
         title = "Nothing to see here"
+    }
+    
+    
+    func enterByPassword(_ alertAction: UIAlertAction) {
+        if let password = KeychainWrapper.standard.string(forKey: passwordKey) {
+            let ac = UIAlertController(title: "Enter password", message: nil, preferredStyle: .alert)
+            ac.addTextField()
+            ac.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [unowned ac, weak self] _ in
+                if ac.textFields![0].text == password { self?.unlockSecretMessage() }
+            }))
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(ac, animated: true)
+        } else {
+            // no password is stored, yet
+            let ac = UIAlertController(title: "Enter new password", message: nil, preferredStyle: .alert)
+            ac.addTextField()
+            ac.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [unowned ac] _ in
+                if let password = ac.textFields![0].text { KeychainWrapper.standard.set(password, forKey: passwordKey) }
+            }))
+            ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            present(ac, animated: true)
+        }
+        
+        if true { KeychainWrapper.standard.set("password", forKey: passwordKey) }
     }
     
 }

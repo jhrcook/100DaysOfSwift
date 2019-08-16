@@ -161,3 +161,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 71 - August 14, 2019:** The base app in Project 30 was a simple table view app with circular icons in each cell. When tapped, a detail view controller loaded with the full (massive) images and recorded the number of times it was tapped on. It was a very slow app - for many reasons - so we used Time Profiler and Acllocations in the Instruments in Xcode.
 
 **Day 72 - August 15, 2019:** I attended my first Learn Swift Boston meet-up where we learned about Core Data ([forked repo](https://github.com/jhrcook/CoreDataDemo/tree/master)). I had a great time and we went through a great tutorial. Tomorroe, I will work through the tutorial on my own.
+
+**Day 73 - August 16, 2019:** I worked through the addition of Core Data to the base app from last night's Core Data tutorial at Learn Swift Boston.

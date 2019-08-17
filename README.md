@@ -163,3 +163,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 72 - August 15, 2019:** I attended my first Learn Swift Boston meet-up where we learned about Core Data ([forked repo](https://github.com/jhrcook/CoreDataDemo/tree/master)). I had a great time and we went through a great tutorial. Tomorroe, I will work through the tutorial on my own.
 
 **Day 73 - August 16, 2019:** I worked through the addition of Core Data to the base app from last night's Core Data tutorial at Learn Swift Boston.
+
+**Day 74 - August 17, 2019:** I add a bunch of features to the paging image view in the Plant Tracker app. I got plenty of practice using the delegate method! I also implemented the `UIActivityViewController` to share images.

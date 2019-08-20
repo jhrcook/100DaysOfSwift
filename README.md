@@ -167,3 +167,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 74 - August 17, 2019:** I add a bunch of features to the paging image view in the Plant Tracker app. I got plenty of practice using the delegate method! I also implemented the `UIActivityViewController` to share images.
 
 **Day 75 - August 18, 2019:** I add even more features to the image collection view in the Plant Tracker app. I first had to do some refactoring - always good practice in app framework architecture! I also learned how to enter a multi-select system in a collection view and implemented it in the image collection view to share or delete multiple images at time.
+
+**Day 76 - August 19, 2019:** We created a `UIStackView` and added the ability to add arranged views (not subviews!!). We made these `WKWebViews` and let the user select one to change the URL.

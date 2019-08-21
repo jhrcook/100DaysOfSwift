@@ -171,3 +171,5 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 76 - August 19, 2019:** We created a `UIStackView` and added the ability to add arranged views (not subviews!!). We made these `WKWebViews` and let the user select one to change the URL.
 
 **Day 77 - August 20, 2019:** We finished up the Multibrowser app by adding a way to delete views. I also learned about how the split-screen system works for iPad and we implemented a feature that splits the web views vertically when the iPad view is "compact."
+
+**Day 78 - August 21, 2019:** Debugged the Plant Tracker app and started adding a way to change the information of the plant.

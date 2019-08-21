@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet var addressBar: UITextField!
     @IBOutlet var stackView: UIStackView!
@@ -29,6 +29,15 @@ class ViewController: UIViewController {
         let delete = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteWebView))
         navigationItem.rightBarButtonItems = [delete, add]
         
+    }
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if traitCollection.horizontalSizeClass == .compact {
+            stackView.axis = .vertical
+        } else {
+            stackView.axis = .horizontal
+        }
     }
     
     
@@ -58,7 +67,22 @@ class ViewController: UIViewController {
     
     
     @objc func deleteWebView(_ alert: UIAlertAction) {
-        
+        if let webView = activeWebView, let index = stackView.arrangedSubviews.firstIndex(of: webView) {
+            stackView.removeArrangedSubview(webView)
+            webView.removeFromSuperview()
+            
+            if stackView.arrangedSubviews.count == 0 {
+                setDefaultTitle()
+            } else {
+                var currentIndex = Int(index)
+                if currentIndex == stackView.arrangedSubviews.count {
+                    currentIndex = stackView.arrangedSubviews.count - 1
+                }
+                if let newSelectedWebView = stackView.arrangedSubviews[currentIndex] as? WKWebView {
+                    selectWebView(newSelectedWebView)
+                }
+            }
+        }
     }
     
     
@@ -68,18 +92,24 @@ class ViewController: UIViewController {
         }
         activeWebView = webView
         webView.layer.borderWidth = 3
+        updateUI(for: webView)
     }
     
     
+    func updateUI(for webView: WKWebView) {
+        title = webView.title
+        addressBar.text = webView.url?.absoluteString ?? ""
+    }
     
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if webView == activeWebView {
+            updateUI(for: webView)
+        }
+    }
 
 }
 
-
-// MARK: WKNavigationDelegate
-extension ViewController: WKNavigationDelegate {
-    
-}
 
 
 // MARK: UITextFieldDelegate
@@ -99,6 +129,7 @@ extension ViewController: UITextFieldDelegate {
     
     
 }
+
 
 
 // MARK: UIGestureRecognizerDelegate

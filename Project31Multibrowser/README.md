@@ -19,3 +19,9 @@ This is an example iOS project produced by [*Hacking with Swift*](https://www.ha
 We created a `UIStackView` and added the ability to add arranged views (not subviews!!). We made these `WKWebViews` and let the user select one to change the URL.
 
 <img src="progress_screenshots/ezgif.com-video-to-gif.gif" height="500"/>
+
+**Day 2 - August 20, 2019**
+
+We finished up the app by adding a way to delete views. I also learned about how the split-screen system works for iPad and we implemented a feature that splits the web views vertically when the iPad view is "compact."
+
+<img src="progress_screenshots/ezgif.com-video-to-gif_2.gif" height="500"/>

@@ -173,3 +173,6 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 **Day 77 - August 20, 2019:** We finished up the Multibrowser app by adding a way to delete views. I also learned about how the split-screen system works for iPad and we implemented a feature that splits the web views vertically when the iPad view is "compact."
 
 **Day 78 - August 21, 2019:** Debugged the Plant Tracker app and started adding a way to change the information of the plant.
+
+**Day 79 - August 22, 2019:** I completed by hour of Swift at the Swift Coders meet-up at Rightpoint this evening. I got help from Leo on how to alter my app's architecture to be more logical, stable, and safe. I will implement the changes soon.
+

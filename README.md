@@ -176,3 +176,4 @@ I finished two of the three challenges for the Selfie Share app (the third was m
 
 **Day 79 - August 22, 2019:** I completed by hour of Swift at the Swift Coders meet-up at Rightpoint this evening. I got help from Leo on how to alter my app's architecture to be more logical, stable, and safe. I will implement the changes soon.
 
+**Day 80 - August 27, 2019:** I refactored the Plant Tracker app to have a PlantManager object that controls the array of plants. The tasks of loading and saving the plants is now handled by this object instead of a view controller.

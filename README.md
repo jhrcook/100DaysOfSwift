@@ -196,3 +196,6 @@ etion: ((Bool) -> Void)? = nil)`. This may be worth writing a post for the websi
 **Day 88 - September 14, 2019:** I watched and took notes on the WWDC 2016 tutorial on unified logging and activity tracing. I learned a lot about how to use the Console app more productively. Also, how Apple recommends developers code the logging system is different to how I currently use it in the Plant Tracker app. Therefore, I will need to ask someone more experienced for the advice.
 
 **Day 89 - September 16, 2019:** I finished the system for editing the attributes of a plant that have pre-defined levels. There was one last weird UI bug that I was able to solve. Now, I just need to write up the documentation for Leo so he can take a look at the system I implemented.
+
+**Day 90 - September 17, 2019:** I finished the explanation for Leo about how I implemented the editing row feature for the general plant information table view. This was a good way for me to review my own code.
+

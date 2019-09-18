@@ -199,3 +199,4 @@ etion: ((Bool) -> Void)? = nil)`. This may be worth writing a post for the websi
 
 **Day 90 - September 17, 2019:** I finished the explanation for Leo about how I implemented the editing row feature for the general plant information table view. This was a good way for me to review my own code.
 
+**Day 91 - September 18, 2019:** I am back to [*Hacking with Swift*](https://www.hackingwithswift.com/read) after some time away, picking up where I left off with Project 32, ["Swift Searcher."](https://www.hackingwithswift.com/read/32/overview) We started the app by making a standard table view. However, we set the cells to be self-adjusting to fit the entire text for the cell's label. We all used `NSAttributedStrings` to make the cell titles look better.

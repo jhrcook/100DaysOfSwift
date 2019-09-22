@@ -204,3 +204,5 @@ etion: ((Bool) -> Void)? = nil)`. This may be worth writing a post for the websi
 **Day 92 - September 19, 2019:** I attended my second Learn Swift Boston meetup tonight. The theme was "Zero to App" so we built an app that shows the decibel level reading from the microphone. I learned a lot of useful iOS information, but some of the most valuable lessons were learnt from watching Zev and Sean code in real time.
 
 **Day 93 - September 20, 2019:** I began work on a simple app to help me track the germination of my seeds. This will just be a simple app for my personal use. I actually planned out how the framework of the app before beginning and made a suprising amount of progress for a few minutes of actual coding. This was a great demonstration of how much I have learned thus far.
+
+**Day 94 - September 21, 2019:** I continued work on the germination tracker app and mainly just struggled with setting up the detail view controller for the app. It's been awhile since I've had to interact (fight) with `UIScrollView`, so this is good practice.

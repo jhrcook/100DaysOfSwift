@@ -212,3 +212,5 @@ etion: ((Bool) -> Void)? = nil)`. This may be worth writing a post for the websi
 **Day 96 - September 23, 2019:** I made great progress on embedding view controllers to in other view controllers. I made the notes section for the Germination Tracker a table view with custom cells. I am currently working on the interface for adding a new note. I have the rough draft for the view and ran into a snag on getting it to present. It's great practice, though.
 
 **Day 97 - September 24, 2019:** I did a bunch of work on the Germination App which included adding swipe-to-delete/insert/copy in the Garden table view, a better UI for the date picker in the information view, a chart for the germination rate (proof-of-concept at the moment) using the 'Chart' package, and swipe to delete in the notes section (need to fix issue with parent scroll view to make this work reliably).
+
+**Day 98 - September 25, 2019:** I got a lot of practice using dates and the `Calendar` API in Foundation. I had to extract time intervals in convert from `Date` to `Double` in order to plot the germination rate line plot in the Germination Tracker app.

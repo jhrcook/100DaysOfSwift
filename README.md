@@ -214,3 +214,5 @@ etion: ((Bool) -> Void)? = nil)`. This may be worth writing a post for the websi
 **Day 97 - September 24, 2019:** I did a bunch of work on the Germination App which included adding swipe-to-delete/insert/copy in the Garden table view, a better UI for the date picker in the information view, a chart for the germination rate (proof-of-concept at the moment) using the 'Chart' package, and swipe to delete in the notes section (need to fix issue with parent scroll view to make this work reliably).
 
 **Day 98 - September 25, 2019:** I got a lot of practice using dates and the `Calendar` API in Foundation. I had to extract time intervals in convert from `Date` to `Double` in order to plot the germination rate line plot in the Germination Tracker app.
+
+**Day 99 - September 26, 2019:** I spent a few hours at RightPoint in Boston for the monthly SwiftCoders meetup. I had a great time and learned a lot from Kevin, an iOS developer at Chewey. I was able to get his help on a lot of the bugs that were in my Germination Tracker app.

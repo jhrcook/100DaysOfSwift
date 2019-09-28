@@ -216,3 +216,5 @@ etion: ((Bool) -> Void)? = nil)`. This may be worth writing a post for the websi
 **Day 98 - September 25, 2019:** I got a lot of practice using dates and the `Calendar` API in Foundation. I had to extract time intervals in convert from `Date` to `Double` in order to plot the germination rate line plot in the Germination Tracker app.
 
 **Day 99 - September 26, 2019:** I spent a few hours at RightPoint in Boston for the monthly SwiftCoders meetup. I had a great time and learned a lot from Kevin, an iOS developer at Chewey. I was able to get his help on a lot of the bugs that were in my Germination Tracker app.
+
+**Day 100 - September 27, 2019:** I worked on the layout of the information view controller. It's comming along, but seeing how difficult it is to satisfy every constraint conflict, I may try to switch to a XIB, instead.

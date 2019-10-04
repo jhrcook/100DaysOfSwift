@@ -8,11 +8,35 @@
 **Start Date: June 5, 2019  
 End Date: September 27, 2019**
 
-I want to learn how to program in the Swift language. To this end, I will practice coding in Swift for at least one hour every day for 100 days.
+## My Education
+
+I wanted to learn how to program in the Swift language. To this end, I practiced coding in Swift for at least one hour every day for 100 days.
 
 I started by working through the first two chpaters of [*The Swift Programming Language*](https://books.apple.com/us/book/the-swift-programming-language-swift-5-0/id881256329) ebook from Apple.
 
-I am now working through example iOS projects by [*Hacking with Swift*](https://www.hackingwithswift.com/read). Each project will have its own directory in this repository.
+I then started my venture by working through example iOS projects by [*Hacking with Swift*](https://www.hackingwithswift.com/read). Each project has its own directory in this repository.
+
+Eventually, I garnered the confidence to start my own apps, the Plant Tracker and the Germination Tracker (can you detect a theme?). These are still in development, but entirely open source on my GitHub.
+
+
+## Conclusion
+
+I have finished my 100 Days of Swift.
+I learned so much - it was like drinking out of a firehose, most days.
+But this is what I loved!
+I looked forward to learning something new each day, and was never disappointed.
+At the end, I feel confident in my ability to learn a new Swift or iOS skill, if needed, thereby removing any hesitation in trying to add a new feature to an app or trying out new use-cases for the language.
+This is likely the most valuable asset to take away from this excercise.
+
+Moving forward, my short-term plan is to keep working on the apps I've started before doing another 100 Days of X.
+Also, I want to return to Hacking with Swift to learn more iOS development basics.
+Afterwards, I will likely do another 100 Days of something, but have yet to decide on the topic.
+I have a short-list, and, at the moment, Data Science/ML with Swift is at the top.
+
+Unitl then, the best way to see what I'm up to is to keep an eye on my website, Twitter, and GitHub (all linked above).
+Also, I frequently attend Swift/iOS-based meetups in Boston.
+Feel free to get in touch if you have any questions or comments!
+
 
 ## Log
 
